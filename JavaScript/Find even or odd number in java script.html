@@ -1,0 +1,26 @@
+<html>
+    <head runat ="server">
+        
+        <script type ="text/javascript">
+
+            function FindEvenOrOdd(){
+                var  number = document.getElementById("input_text").value;
+                if( number % 2 == 0)
+                {
+                    alert("number is even");
+                } 
+                else{
+                    alert("number is odd");
+                }
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <form id ="form check number" runat="server">
+        <input type="textbox" id="input_text" runat="server" /> 
+        <input type="button" value="check Number" onclick="FindEvenOrOdd()"/>
+    </form>
+    </body>
+</html>
