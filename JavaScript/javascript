@@ -15,3 +15,9 @@ Basically what happen is that users do have an easy option that can disable the 
 side java script so there will be no client side form validation and we didn't write the server side form validation in that case ther could be different threads
 by storing invalid data to securing  vulnerabilities.  client basec validation provides better user experience as it reduce the unnecessary rounds trips between 
 the client and the server, so it's better to have a client side validation.
+
+What are the disadvantages of javaScript?
+Basically there are two disadvantages that java script have that are Security and browser compatiblity when we talk about security concerns users can use java script 
+to have the access to the history of browser and steal the passwords as javascript runs on client side. Another issue with java is that some browser does not support the
+functionality of java script.
+
