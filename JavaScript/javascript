@@ -1,2 +1,14 @@
-Hi!
-we learn about java script.
+Hi! 
+Here we learn about java script.
+
+what are the advantages of using java script in your application.
+1.  First of all by using the java script we can do the form validation on client-side, which can reduce the unnecessary rounds between the client and the server which
+also mean that the load is reduce on the server and our applicaton is going to be more responsive.
+2.  Java script uses the client macine processing power which means that if we assume that there are more than 1k users who submitted the form without validating it, so our 
+application going to perform the require operation on client machine instead of going their what? server.
+3.  With java script we can achieve the partial page loading that means the only portions of the page can be update without reloading the web form that is called the
+AJAX.
+4.  java script can also be used to animate element on a page. For example show and hide the elements and section of the page.
+  
+The question that rise here is that why do we need the both client and server side validation?
+Basically what happen is that users do have an easy option that can disable the java script on the client side so let's say that we have disables the client side java script so there will be no client side form validation and we didn't write the server side form validation in that case ther could be different threads by storing invalid data to securing  vulnerabilities.  client basec validation provides better user experience as it reduce the unnecessary rounds trips between the client and the server, so it's better to have a client side validation.
