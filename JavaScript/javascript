@@ -21,3 +21,34 @@ Basically there are two disadvantages that java script have that are Security an
 to have the access to the history of browser and steal the passwords as javascript runs on client side. Another issue with java is that some browser does not support the
 functionality of java script.
 
+#In the below example we can found out how to use an extrnal java script file in our html page
+1.  Create an external javascript file ( In my case its Even_Odd.js) and then put the below code in that file
+
+  function CheckNumber(){
+  var  number = document.getElementById("get_input_Number").value;
+  
+  if( number % 2 == 0){
+  alert("number is even");
+  }
+  else{
+  alert("number is odd");
+  }
+  
+  
+  }
+  
+  2. Create a html file and save with .html extension and put the below code.
+  <html>
+  <head>
+  <script type ="text/javascript" src ="Even_Odd.js"></script>
+  </head>
+  <body>
+  <form id ="checkNumberForm" >
+  <input type ="textbox" id="get_input_Number"/>
+  <input type = "button" value = "check number" onClick="CheckNumber()"/>
+  
+  </form>
+  </body>
+  </html>
+ 
+
