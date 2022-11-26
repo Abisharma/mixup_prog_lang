@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>arrray in java script</title>
+        <script type="text/javascript">
+            var input_array_size =Number( prompt("enter the array size"));
+            var temp_array = new Array(input_array_size);
+           // document.write(temp_array.length);
+            for(var array_index =0; array_index<temp_array.length; array_index++){
+             //   document.write("array index");
+                temp_array[array_index] = Math.round(Math.random()*temp_array.length);
+               // document.write("print array")
+            }
+
+           // alert("we are going to print the randomy initialized array");
+
+            for(var start= 0; start < temp_array.length; start++)
+            {
+                document.write(temp_array[start] % 2 == 0 ? temp_array[start] + "</br>"  : "number is odd"+"</br>");
+            }
+
+
+
+            /*for(var array_index = 0; array_index <= input_array_size.length; array_index++) {
+                document.write("print array");
+                //temp_array[array_index]=Math.round(Math.random() * 10);
+                
+                //document.write(temp_array[array_index]);
+            }*/
+            //document.write(temp_array[0]);
+        </script>
+    </head>
+    <body></body>
+</html>
