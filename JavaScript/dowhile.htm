@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            do_while example
+        </title>
+        <script type="text/javascript">
+            
+            
+            var userchoice = "";
+            
+            do {
+                var  targetnumber = Number(prompt("enter the target number",""));
+                var start = 0;
+                while ( start <= targetnumber) {
+                    document.write(start + "<br/>");
+                    start = start + 2;
+                    }
+
+                    do {
+                userchoice = prompt("enter YES or NO  to continue").toUpperCase();
+            if (userchoice != "YES" && userchoice != "NO")
+            {
+                alert("invalid, say YES or NO to continue");
+            }
+            } while (userchoice != "YES" && userchoice != "NO");
+            } while (userchoice == "YES");
+            
+            
+            
+
+                    </script>
+        
+    </head>
+    <body>
+
+    </body>
+</html>
