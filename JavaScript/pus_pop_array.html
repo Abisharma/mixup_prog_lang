@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>working with push and pop operations in array java script </title>
+        <script title ="text/javascript">
+            var get_array_size = Number(prompt("enter the size of array"));
+            //alert(document.write(Number(get_array_size)));
+            var init_array = new Array(get_array_size);
+            //alert(document.write(init_array.length));
+            //document.write("array is initialized");
+            for(var index = 0; index < init_array.length; index++){
+                //Math.round(document.write("</br>")+Math.random() * init_array.length +document.write("</br>"));
+                init_array[index] = Math.round(Math.random() * 9 );
+                document.write("</br>" + init_array[index] + "</br>");
+            }
+            //document.write(init_array);
+            document.write("performing the operations on by using push and pop method </br>");
+
+            for(var ip = 0 ; ip <20; ip++){
+                init_array.push(Math.round(Math.random() * 18));
+                document.write("</br> pushing element "  + init_array[ip]+"</br>");
+            }
+            
+            document.write( "</br>  total array length is " + init_array.length + "</br>"  );
+
+
+            for(var i = 0; i <  30; i = i + 1){
+
+                
+
+                document.write("</br> array element at  is" + init_array.pop() + "</br>");
+
+                //index = index +1;
+            }
+        </script>
+    </head>
+</html>
