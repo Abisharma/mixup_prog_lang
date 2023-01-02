@@ -1,0 +1,4 @@
+COMMANDS 					DEFINITION
+show databases;					used to list out all the existing database;
+use database_name;				will allow to get in to the database to perform all possible operations;
+create database database_name;			Basically used to create the database;
