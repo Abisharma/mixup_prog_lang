@@ -1,1 +1,61 @@
+In this repository we are going to learn about DataBase and how does it work with different phases for example data definition and data manipulation.
+In data definition we have different kinds of operation that use to perform creation of schema and in data manipulation we have operation
+that contain the operation for updation of table.
 
+1. DATA DEFINITION OPERATION ARE FOLLOWING :-
+ Topics:
+   ALTER DATABASE
+   ALTER EVENT
+   ALTER FUNCTION
+   ALTER INSTANCE
+   ALTER PROCEDURE
+   ALTER SERVER
+   ALTER TABLE
+   ALTER TABLESPACE
+   ALTER VIEW
+   CONSTRAINT
+   CREATE DATABASE
+   CREATE EVENT
+   CREATE FUNCTION
+   CREATE INDEX
+   CREATE PROCEDURE
+   CREATE SERVER
+   CREATE SPATIAL REFERENCE SYSTEM
+   CREATE TABLE
+   CREATE TABLESPACE
+   CREATE TRIGGER
+   CREATE VIEW
+   DROP DATABASE
+   DROP EVENT
+   DROP FUNCTION
+   DROP INDEX
+   DROP PROCEDURE
+   DROP SERVER
+   DROP SPATIAL REFERENCE SYSTEM
+   DROP TABLE
+   DROP TABLESPACE
+   DROP TRIGGER
+   DROP VIEW
+   RENAME TABLE
+   TRUNCATE TABLE
+   
+   
+2. DATA MANIPULATION OPERATIONS ARE FOLLOWING:
+  
+Topics:
+   CALL
+   DELETE
+   DO
+   DUAL
+   HANDLER
+   IMPORT TABLE
+   INSERT
+   INSERT DELAYED
+   INSERT SELECT
+   JOIN
+   LOAD DATA
+   LOAD XML
+   REPLACE
+   SELECT
+   UNION
+   UPDATE
