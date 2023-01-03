@@ -22,7 +22,13 @@ where clause					we use the where clause in query when we need to retrieve the o
 						ex. select column_name from table_name where condition_by_using_existing_operators.
 	   
 
-Where clause with AND,OR,NOT Operators		we use AND,OR operators when we want to apply more than one condition to specify, if we want to retrieve a record from database when certain
-						is not true in that case we use NOT operator.
+Where clause with AND,OR,NOT Operators		we use AND,OR operators when we want to apply more than one condition to specify,
+						if we want to retrieve a record from database when certain condition is not true 
+						in that case we use NOT operator.
 
- 
+SQL NULL Values					In SQL Null values are used when a field in a table are used to be blank or empty , null means is not zero it simply
+						means that there are no value, we use NOT NULL to retrieve the values from a field that are not blank, we use IS NULL
+						to retrieve all the records where it contains blank value in a specific column.
+
+
+						 
