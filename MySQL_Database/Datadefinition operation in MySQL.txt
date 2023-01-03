@@ -34,5 +34,8 @@ SQL NULL Values;				In SQL Null values are used when a field in a table are used
 SQL UPDATE;	 				Update statement is used to modify the existing records in a table.
 
 
-SQL Delete 					If we want to delete an existing records from a table we use the delete statement.
+SQL Delete; 					If we want to delete an existing records from a table we use the delete statement.
+
+SQL MIN,MAX,count; 				when we need to get minimum and maximum from a field we use min(column_name) or max(column_name) and to 
+						count the number of records of a field we need count(column_name).
  
