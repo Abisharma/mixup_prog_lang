@@ -31,4 +31,8 @@ SQL NULL Values;				In SQL Null values are used when a field in a table are used
 						to retrieve all the records where it contains blank value in a specific column.
 
 
-SQL UPDATE;	 				Update statement is used to modify the existing records in a table. 
+SQL UPDATE;	 				Update statement is used to modify the existing records in a table.
+
+
+SQL Delete 					If we want to delete an existing records from a table we use the delete statement.
+ 
