@@ -17,18 +17,18 @@ select distinct(column_name) from table_name;	we use distinct keyword to exclude
 
 insert into table_name values(values_for_first_column, values_for_the_second_column);  we use this command to insert values to specified table_name;
 
-where clause					we use the where clause in query when we need to retrieve the output by specify the certain conditiion, where clause provide us different
+where clause;					we use the where clause in query when we need to retrieve the output by specify the certain conditiion, where clause provide us different
 						kind of operators to use in the condition for example =,<,>,<=,>=,Between,In,Like etc.
 						ex. select column_name from table_name where condition_by_using_existing_operators.
 	   
 
-Where clause with AND,OR,NOT Operators		we use AND,OR operators when we want to apply more than one condition to specify,
+Where clause with AND,OR,NOT Operators;		we use AND,OR operators when we want to apply more than one condition to specify,
 						if we want to retrieve a record from database when certain condition is not true 
 						in that case we use NOT operator.
 
-SQL NULL Values					In SQL Null values are used when a field in a table are used to be blank or empty , null means is not zero it simply
+SQL NULL Values;				In SQL Null values are used when a field in a table are used to be blank or empty , null means is not zero it simply
 						means that there are no value, we use NOT NULL to retrieve the values from a field that are not blank, we use IS NULL
 						to retrieve all the records where it contains blank value in a specific column.
 
 
-						 
+SQL UPDATE;	 				Update statement is used to modify the existing records in a table. 
