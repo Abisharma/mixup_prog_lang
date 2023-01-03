@@ -2,3 +2,16 @@ COMMANDS 					DEFINITION
 show databases;					used to list out all the existing database;
 use database_name;				will allow to get in to the database to perform all possible operations;
 create database database_name;			Basically used to create the database;
+show tables;					this command is used to retrieve the name of all tables that present in current using database.
+
+create table table_name (
+column_name1 datatype_for_the_column_name1,
+column_name2 datatype_for_the_column_name2,	this command is used to create a table inside the current using database, by default table will store into the default database.
+column_name3 datatype_for_the_column_name3);
+
+select column_name from table_name;		this command is used to retrieve the specified column_name from the specified table_name;
+
+select * from table_name;			we use this command when we want to retrieve all existing records from specified table_name;
+
+insert into table_name values(values_for_first_column, values_for_the_second_column);  we use this command to insert values to specified table_name;
+ 
