@@ -14,6 +14,10 @@ select column_name from table_name;		this command is used to retrieve the specif
 select * from table_name;			we use this command when we want to retrieve all existing records from specified table_name;
 
 select distinct(column_name) from table_name;	we use distinct keyword to exclude the duplicate value from desired output.
-s
+
 insert into table_name values(values_for_first_column, values_for_the_second_column);  we use this command to insert values to specified table_name;
- 
+
+where clause					we use the where clause in query when we need to retrieve the output by specify the certain conditiion, where clause provide us different
+						kind of operators to use in the condition for example =,<,>,<=,>=,Between,In,Like etc.
+						ex. select column_name from table_name where condition_by_using_existing_operators.
+	   
