@@ -1,0 +1,1043 @@
+Enter password: *****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 8.0.15 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> help
+
+For information about MySQL products and services, visit:
+   http://www.mysql.com/
+For developer information, including the MySQL Reference Manual, visit:
+   http://dev.mysql.com/
+To buy MySQL Enterprise support, training, or other products, visit:
+   https://shop.mysql.com/
+
+List of all MySQL commands:
+Note that all text commands must be first on line and end with ';'
+?         (\?) Synonym for `help'.
+clear     (\c) Clear the current input statement.
+connect   (\r) Reconnect to the server. Optional arguments are db and host.
+delimiter (\d) Set statement delimiter.
+ego       (\G) Send command to mysql server, display result vertically.
+exit      (\q) Exit mysql. Same as quit.
+go        (\g) Send command to mysql server.
+help      (\h) Display this help.
+notee     (\t) Don't write into outfile.
+print     (\p) Print current command.
+prompt    (\R) Change your mysql prompt.
+quit      (\q) Quit mysql.
+rehash    (\#) Rebuild completion hash.
+source    (\.) Execute an SQL script file. Takes a file name as an argument.
+status    (\s) Get status information from the server.
+tee       (\T) Set outfile [to_outfile]. Append everything into given outfile.
+use       (\u) Use another database. Takes database name as argument.
+charset   (\C) Switch to another charset. Might be needed for processing binlog with multi-byte charsets.
+warnings  (\W) Show warnings after every statement.
+nowarning (\w) Don't show warnings after every statement.
+resetconnection(\x) Clean session context.
+
+For server side help, type 'help contents'
+
+mysql> ?
+
+For information about MySQL products and services, visit:
+   http://www.mysql.com/
+For developer information, including the MySQL Reference Manual, visit:
+   http://dev.mysql.com/
+To buy MySQL Enterprise support, training, or other products, visit:
+   https://shop.mysql.com/
+
+List of all MySQL commands:
+Note that all text commands must be first on line and end with ';'
+?         (\?) Synonym for `help'.
+clear     (\c) Clear the current input statement.
+connect   (\r) Reconnect to the server. Optional arguments are db and host.
+delimiter (\d) Set statement delimiter.
+ego       (\G) Send command to mysql server, display result vertically.
+exit      (\q) Exit mysql. Same as quit.
+go        (\g) Send command to mysql server.
+help      (\h) Display this help.
+notee     (\t) Don't write into outfile.
+print     (\p) Print current command.
+prompt    (\R) Change your mysql prompt.
+quit      (\q) Quit mysql.
+rehash    (\#) Rebuild completion hash.
+source    (\.) Execute an SQL script file. Takes a file name as an argument.
+status    (\s) Get status information from the server.
+tee       (\T) Set outfile [to_outfile]. Append everything into given outfile.
+use       (\u) Use another database. Takes database name as argument.
+charset   (\C) Switch to another charset. Might be needed for processing binlog with multi-byte charsets.
+warnings  (\W) Show warnings after every statement.
+nowarning (\w) Don't show warnings after every statement.
+resetconnection(\x) Clean session context.
+
+For server side help, type 'help contents'
+
+mysql> help user;
+Name: 'USER'
+Description:
+Syntax:
+USER()
+
+Returns the current MySQL user name and host name as a string in the
+utf8 character set.
+
+URL: http://dev.mysql.com/doc/refman/8.0/en/information-functions.html
+
+Examples:
+mysql> SELECT USER();
+        -> 'davida@localhost'
+
+mysql> help contents;
+You asked for help about help category: "Contents"
+For more information, type 'help <item>', where <item> is one of the following
+categories:
+   Account Management
+   Administration
+   Components
+   Compound Statements
+   Data Definition
+   Data Manipulation
+   Data Types
+   Functions
+   Functions and Modifiers for Use with GROUP BY
+   Geographic Features
+   Help Metadata
+   Language Structure
+   Plugins
+   Storage Engines
+   Table Maintenance
+   Transactions
+   User-Defined Functions
+   Utility
+
+mysql> help data definition
+You asked for help about help category: "Data Definition"
+For more information, type 'help <item>', where <item> is one of the following
+topics:
+   ALTER DATABASE
+   ALTER EVENT
+   ALTER FUNCTION
+   ALTER INSTANCE
+   ALTER PROCEDURE
+   ALTER SERVER
+   ALTER TABLE
+   ALTER TABLESPACE
+   ALTER VIEW
+   CONSTRAINT
+   CREATE DATABASE
+   CREATE EVENT
+   CREATE FUNCTION
+   CREATE INDEX
+   CREATE PROCEDURE
+   CREATE SERVER
+   CREATE SPATIAL REFERENCE SYSTEM
+   CREATE TABLE
+   CREATE TABLESPACE
+   CREATE TRIGGER
+   CREATE VIEW
+   DROP DATABASE
+   DROP EVENT
+   DROP FUNCTION
+   DROP INDEX
+   DROP PROCEDURE
+   DROP SERVER
+   DROP SPATIAL REFERENCE SYSTEM
+   DROP TABLE
+   DROP TABLESPACE
+   DROP TRIGGER
+   DROP VIEW
+   RENAME TABLE
+   TRUNCATE TABLE
+
+mysql> help data manipulation;
+You asked for help about help category: "Data Manipulation"
+For more information, type 'help <item>', where <item> is one of the following
+topics:
+   CALL
+   DELETE
+   DO
+   DUAL
+   HANDLER
+   IMPORT TABLE
+   INSERT
+   INSERT DELAYED
+   INSERT SELECT
+   JOIN
+   LOAD DATA
+   LOAD XML
+   REPLACE
+   SELECT
+   UNION
+   UPDATE
+
+mysql> help call
+Name: 'CALL'
+Description:
+Syntax:
+CALL sp_name([parameter[,...]])
+CALL sp_name[()]
+
+The CALL statement invokes a stored procedure that was defined
+previously with CREATE PROCEDURE.
+
+Stored procedures that take no arguments can be invoked without
+parentheses. That is, CALL p() and CALL p are equivalent.
+
+CALL can pass back values to its caller using parameters that are
+declared as OUT or INOUT parameters. When the procedure returns, a
+client program can also obtain the number of rows affected for the
+final statement executed within the routine: At the SQL level, call the
+ROW_COUNT() function; from the C API, call the mysql_affected_rows()
+function.
+
+URL: http://dev.mysql.com/doc/refman/8.0/en/call.html
+
+
+mysql> help data definition
+You asked for help about help category: "Data Definition"
+For more information, type 'help <item>', where <item> is one of the following
+topics:
+   ALTER DATABASE
+   ALTER EVENT
+   ALTER FUNCTION
+   ALTER INSTANCE
+   ALTER PROCEDURE
+   ALTER SERVER
+   ALTER TABLE
+   ALTER TABLESPACE
+   ALTER VIEW
+   CONSTRAINT
+   CREATE DATABASE
+   CREATE EVENT
+   CREATE FUNCTION
+   CREATE INDEX
+   CREATE PROCEDURE
+   CREATE SERVER
+   CREATE SPATIAL REFERENCE SYSTEM
+   CREATE TABLE
+   CREATE TABLESPACE
+   CREATE TRIGGER
+   CREATE VIEW
+   DROP DATABASE
+   DROP EVENT
+   DROP FUNCTION
+   DROP INDEX
+   DROP PROCEDURE
+   DROP SERVER
+   DROP SPATIAL REFERENCE SYSTEM
+   DROP TABLE
+   DROP TABLESPACE
+   DROP TRIGGER
+   DROP VIEW
+   RENAME TABLE
+   TRUNCATE TABLE
+
+mysql> ^C
+mysql> help data manipulation
+You asked for help about help category: "Data Manipulation"
+For more information, type 'help <item>', where <item> is one of the following
+topics:
+   CALL
+   DELETE
+   DO
+   DUAL
+   HANDLER
+   IMPORT TABLE
+   INSERT
+   INSERT DELAYED
+   INSERT SELECT
+   JOIN
+   LOAD DATA
+   LOAD XML
+   REPLACE
+   SELECT
+   UNION
+   UPDATE
+
+mysql> help content
+
+Nothing found
+Please try to run 'help contents' for a list of all accessible topics
+
+mysql> help contents;
+You asked for help about help category: "Contents"
+For more information, type 'help <item>', where <item> is one of the following
+categories:
+   Account Management
+   Administration
+   Components
+   Compound Statements
+   Data Definition
+   Data Manipulation
+   Data Types
+   Functions
+   Functions and Modifiers for Use with GROUP BY
+   Geographic Features
+   Help Metadata
+   Language Structure
+   Plugins
+   Storage Engines
+   Table Maintenance
+   Transactions
+   User-Defined Functions
+   Utility
+
+mysql> help Data Manipulation;
+You asked for help about help category: "Data Manipulation"
+For more information, type 'help <item>', where <item> is one of the following
+topics:
+   CALL
+   DELETE
+   DO
+   DUAL
+   HANDLER
+   IMPORT TABLE
+   INSERT
+   INSERT DELAYED
+   INSERT SELECT
+   JOIN
+   LOAD DATA
+   LOAD XML
+   REPLACE
+   SELECT
+   UNION
+   UPDATE
+
+mysql> ^C
+mysql> version
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'version' at line 1
+mysql> mysql
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mysql' at line 1
+mysql> mysql;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mysql' at line 1
+mysql> version
+    -> ,
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'version
+,' at line 1
+mysql> version;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'version' at line 1
+mysql> clear
+mysql> ;
+ERROR:
+No query specified
+
+mysql> clear;
+mysql> ,
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',' at line 1
+mysql> help data definition;
+You asked for help about help category: "Data Definition"
+For more information, type 'help <item>', where <item> is one of the following
+topics:
+   ALTER DATABASE
+   ALTER EVENT
+   ALTER FUNCTION
+   ALTER INSTANCE
+   ALTER PROCEDURE
+   ALTER SERVER
+   ALTER TABLE
+   ALTER TABLESPACE
+   ALTER VIEW
+   CONSTRAINT
+   CREATE DATABASE
+   CREATE EVENT
+   CREATE FUNCTION
+   CREATE INDEX
+   CREATE PROCEDURE
+   CREATE SERVER
+   CREATE SPATIAL REFERENCE SYSTEM
+   CREATE TABLE
+   CREATE TABLESPACE
+   CREATE TRIGGER
+   CREATE VIEW
+   DROP DATABASE
+   DROP EVENT
+   DROP FUNCTION
+   DROP INDEX
+   DROP PROCEDURE
+   DROP SERVER
+   DROP SPATIAL REFERENCE SYSTEM
+   DROP TABLE
+   DROP TABLESPACE
+   DROP TRIGGER
+   DROP VIEW
+   RENAME TABLE
+   TRUNCATE TABLE
+
+mysql> help create database;
+Name: 'CREATE DATABASE'
+Description:
+Syntax:
+CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] db_name
+    [create_specification] ...
+
+create_specification:
+    [DEFAULT] CHARACTER SET [=] charset_name
+  | [DEFAULT] COLLATE [=] collation_name
+
+CREATE DATABASE creates a database with the given name. To use this
+statement, you need the CREATE privilege for the database. CREATE
+SCHEMA is a synonym for CREATE DATABASE.
+
+URL: http://dev.mysql.com/doc/refman/8.0/en/create-database.html
+
+
+mysql> create database practicedatabase;
+Query OK, 1 row affected (0.21 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| practicedatabase   |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| practicedatabase   |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use practicedatabase;
+Database changed
+mysql> show tables;
+Empty set (0.03 sec)
+
+mysql> help create table;
+Name: 'CREATE TABLE'
+Description:
+Syntax:
+CREATE [TEMPORARY] TABLE [IF NOT EXISTS] tbl_name
+    (create_definition,...)
+    [table_options]
+    [partition_options]
+
+CREATE [TEMPORARY] TABLE [IF NOT EXISTS] tbl_name
+    [(create_definition,...)]
+    [table_options]
+    [partition_options]
+    [IGNORE | REPLACE]
+    [AS] query_expression
+
+CREATE [TEMPORARY] TABLE [IF NOT EXISTS] tbl_name
+    { LIKE old_tbl_name | (LIKE old_tbl_name) }
+
+create_definition:
+    col_name column_definition
+  | [CONSTRAINT [symbol]] PRIMARY KEY [index_type] (key_part,...)
+      [index_option] ...
+  | {INDEX|KEY} [index_name] [index_type] (key_part,...)
+      [index_option] ...
+  | [CONSTRAINT [symbol]] UNIQUE [INDEX|KEY]
+      [index_name] [index_type] (key_part,...)
+      [index_option] ...
+  | {FULLTEXT|SPATIAL} [INDEX|KEY] [index_name] (key_part,...)
+      [index_option] ...
+  | [CONSTRAINT [symbol]] FOREIGN KEY
+      [index_name] (col_name,...) reference_definition
+  | CHECK (expr)
+
+column_definition:
+    data_type [NOT NULL | NULL] [DEFAULT {literal | (expr)} ]
+      [AUTO_INCREMENT] [UNIQUE [KEY]] [[PRIMARY] KEY]
+      [COMMENT 'string']
+      [COLUMN_FORMAT {FIXED|DYNAMIC|DEFAULT}]
+      [reference_definition]
+  | data_type [GENERATED ALWAYS] AS (expression)
+      [VIRTUAL | STORED] [NOT NULL | NULL]
+      [UNIQUE [KEY]] [[PRIMARY] KEY]
+      [COMMENT 'string']
+
+data_type:
+    (see http://dev.mysql.com/doc/refman/8.0/en/data-types.html)
+
+key_part: {col_name [(length)] | (expr)} [ASC | DESC]
+
+index_type:
+    USING {BTREE | HASH}
+
+index_option:
+    KEY_BLOCK_SIZE [=] value
+  | index_type
+  | WITH PARSER parser_name
+  | COMMENT 'string'
+  | {VISIBLE | INVISIBLE}
+
+reference_definition:
+    REFERENCES tbl_name (key_part,...)
+      [MATCH FULL | MATCH PARTIAL | MATCH SIMPLE]
+      [ON DELETE reference_option]
+      [ON UPDATE reference_option]
+
+reference_option:
+    RESTRICT | CASCADE | SET NULL | NO ACTION | SET DEFAULT
+
+table_options:
+    table_option [[,] table_option] ...
+
+table_option:
+    AUTO_INCREMENT [=] value
+  | AVG_ROW_LENGTH [=] value
+  | [DEFAULT] CHARACTER SET [=] charset_name
+  | CHECKSUM [=] {0 | 1}
+  | [DEFAULT] COLLATE [=] collation_name
+  | COMMENT [=] 'string'
+  | COMPRESSION [=] {'ZLIB'|'LZ4'|'NONE'}
+  | CONNECTION [=] 'connect_string'
+  | {DATA|INDEX} DIRECTORY [=] 'absolute path to directory'
+  | DELAY_KEY_WRITE [=] {0 | 1}
+  | ENCRYPTION [=] {'Y' | 'N'}
+  | ENGINE [=] engine_name
+  | INSERT_METHOD [=] { NO | FIRST | LAST }
+  | KEY_BLOCK_SIZE [=] value
+  | MAX_ROWS [=] value
+  | MIN_ROWS [=] value
+  | PACK_KEYS [=] {0 | 1 | DEFAULT}
+  | PASSWORD [=] 'string'
+  | ROW_FORMAT [=] {DEFAULT|DYNAMIC|FIXED|COMPRESSED|REDUNDANT|COMPACT}
+  | STATS_AUTO_RECALC [=] {DEFAULT|0|1}
+  | STATS_PERSISTENT [=] {DEFAULT|0|1}
+  | STATS_SAMPLE_PAGES [=] value
+  | TABLESPACE tablespace_name
+  | UNION [=] (tbl_name[,tbl_name]...)
+
+partition_options:
+    PARTITION BY
+        { [LINEAR] HASH(expr)
+        | [LINEAR] KEY [ALGORITHM={1|2}] (column_list)
+        | RANGE{(expr) | COLUMNS(column_list)}
+        | LIST{(expr) | COLUMNS(column_list)} }
+    [PARTITIONS num]
+    [SUBPARTITION BY
+        { [LINEAR] HASH(expr)
+        | [LINEAR] KEY [ALGORITHM={1|2}] (column_list) }
+      [SUBPARTITIONS num]
+    ]
+    [(partition_definition [, partition_definition] ...)]
+
+partition_definition:
+    PARTITION partition_name
+        [VALUES
+            {LESS THAN {(expr | value_list) | MAXVALUE}
+            |
+            IN (value_list)}]
+        [[STORAGE] ENGINE [=] engine_name]
+        [COMMENT [=] 'string' ]
+        [DATA DIRECTORY [=] 'data_dir']
+        [INDEX DIRECTORY [=] 'index_dir']
+        [MAX_ROWS [=] max_number_of_rows]
+        [MIN_ROWS [=] min_number_of_rows]
+        [TABLESPACE [=] tablespace_name]
+        [(subpartition_definition [, subpartition_definition] ...)]
+
+subpartition_definition:
+    SUBPARTITION logical_name
+        [[STORAGE] ENGINE [=] engine_name]
+        [COMMENT [=] 'string' ]
+        [DATA DIRECTORY [=] 'data_dir']
+        [INDEX DIRECTORY [=] 'index_dir']
+        [MAX_ROWS [=] max_number_of_rows]
+        [MIN_ROWS [=] min_number_of_rows]
+        [TABLESPACE [=] tablespace_name]
+
+query_expression:
+    SELECT ...   (Some valid select or union statement)
+
+CREATE TABLE creates a table with the given name. You must have the
+CREATE privilege for the table.
+
+By default, tables are created in the default database, using the
+InnoDB storage engine. An error occurs if the table exists, if there is
+no default database, or if the database does not exist.
+
+For information about the physical representation of a table, see
+http://dev.mysql.com/doc/refman/8.0/en/create-table-files.html.
+
+URL: http://dev.mysql.com/doc/refman/8.0/en/create-table.html
+
+
+mysql> create table rues_de_la_france(
+    -> id int,
+    -> nom_de_la_quartier varchar(255),
+    -> code_de_la_departement int,
+    -> nom_de_la_region varchar(255));
+Query OK, 0 rows affected (0.99 sec)
+
+mysql> show tables;
++----------------------------+
+| Tables_in_practicedatabase |
++----------------------------+
+| rues_de_la_france          |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from rues_de_la_france;
+Empty set (0.03 sec)
+
+mysql> help insert
+Name: 'INSERT'
+Description:
+Syntax:
+INSERT [LOW_PRIORITY | DELAYED | HIGH_PRIORITY] [IGNORE]
+    [INTO] tbl_name
+    [PARTITION (partition_name [, partition_name] ...)]
+    [(col_name [, col_name] ...)]
+    {VALUES | VALUE} (value_list) [, (value_list)] ...
+    [ON DUPLICATE KEY UPDATE assignment_list]
+
+INSERT [LOW_PRIORITY | DELAYED | HIGH_PRIORITY] [IGNORE]
+    [INTO] tbl_name
+    [PARTITION (partition_name [, partition_name] ...)]
+    SET assignment_list
+    [ON DUPLICATE KEY UPDATE assignment_list]
+
+INSERT [LOW_PRIORITY | HIGH_PRIORITY] [IGNORE]
+    [INTO] tbl_name
+    [PARTITION (partition_name [, partition_name] ...)]
+    [(col_name [, col_name] ...)]
+    SELECT ...
+    [ON DUPLICATE KEY UPDATE assignment_list]
+
+value:
+    {expr | DEFAULT}
+
+value_list:
+    value [, value] ...
+
+assignment:
+    col_name = value
+
+assignment_list:
+    assignment [, assignment] ...
+
+INSERT inserts new rows into an existing table. The INSERT ... VALUES
+and INSERT ... SET forms of the statement insert rows based on
+explicitly specified values. The INSERT ... SELECT form inserts rows
+selected from another table or tables. INSERT with an ON DUPLICATE KEY
+UPDATE clause enables existing rows to be updated if a row to be
+inserted would cause a duplicate value in a UNIQUE index or PRIMARY
+KEY.
+
+For additional information about INSERT ... SELECT and INSERT ... ON
+DUPLICATE KEY UPDATE, see [HELP INSERT SELECT], and
+http://dev.mysql.com/doc/refman/8.0/en/insert-on-duplicate.html.
+
+In MySQL 8.0, the DELAYED keyword is accepted but ignored by the
+server. For the reasons for this, see [HELP INSERT DELAYED],
+
+Inserting into a table requires the INSERT privilege for the table. If
+the ON DUPLICATE KEY UPDATE clause is used and a duplicate key causes
+an UPDATE to be performed instead, the statement requires the UPDATE
+privilege for the columns to be updated. For columns that are read but
+not modified you need only the SELECT privilege (such as for a column
+referenced only on the right hand side of an col_name=expr assignment
+in an ON DUPLICATE KEY UPDATE clause).
+
+When inserting into a partitioned table, you can control which
+partitions and subpartitions accept new rows. The PARTITION option
+takes a list of the comma-separated names of one or more partitions or
+subpartitions (or both) of the table. If any of the rows to be inserted
+by a given INSERT statement do not match one of the partitions listed,
+the INSERT statement fails with the error Found a row not matching the
+given partition set. For more information and examples, see
+http://dev.mysql.com/doc/refman/8.0/en/partitioning-selection.html.
+
+URL: http://dev.mysql.com/doc/refman/8.0/en/insert.html
+
+
+mysql> insert into rues_de_la_france values(1,'cergy','95','ile-de-france');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from rues_de_la_frances;
+ERROR 1146 (42S02): Table 'practicedatabase.rues_de_la_frances' doesn't exist
+mysql> select * from rues_de_la_france;
++------+--------------------+------------------------+------------------+
+| id   | nom_de_la_quartier | code_de_la_departement | nom_de_la_region |
++------+--------------------+------------------------+------------------+
+|    1 | cergy              |                     95 | ile-de-france    |
++------+--------------------+------------------------+------------------+
+1 row in set (0.00 sec)
+
+mysql> insert into rues_de_la_france values(2,'nation',75012,'ile-de-france');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> select  * from rues_de_la_france;
++------+--------------------+------------------------+------------------+
+| id   | nom_de_la_quartier | code_de_la_departement | nom_de_la_region |
++------+--------------------+------------------------+------------------+
+|    1 | cergy              |                     95 | ile-de-france    |
+|    2 | nation             |                  75012 | ile-de-france    |
++------+--------------------+------------------------+------------------+
+2 rows in set (0.00 sec)
+
+mysql> select  id from rues_de_la_france where department = 95;
+ERROR 1054 (42S22): Unknown column 'department' in 'where clause'
+mysql> select  id from rues_de_la_france where code_de_la_department = 95;
+ERROR 1054 (42S22): Unknown column 'code_de_la_department' in 'where clause'
+mysql> select id from code_de_la_france where code_de_la_departement = 95;
+ERROR 1146 (42S02): Table 'practicedatabase.code_de_la_france' doesn't exist
+mysql> select id from rues_de_la_france where code_de_la_departement = 95;
++------+
+| id   |
++------+
+|    1 |
++------+
+1 row in set (0.00 sec)
+
+mysql> select nom_de_la_region from rues_de_la_france where region ='ile-de-france' groupby id;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'groupby id' at line 1
+mysql> select nom_de_la_region from rues_de_la_france where region ='ile-de-france' groupby 'id';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'groupby 'id'' at line 1
+mysql> select nom_de_la_region from rues_de_la_france where region ='ile-de-france' groupby = 'id';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'groupby = 'id'' at line 1
+mysql> select nom_de_la_region from rues_de_la_france where region ='ile-de-france' group by  'id';
+ERROR 1054 (42S22): Unknown column 'region' in 'where clause'
+mysql> select nom_de_la_region from rues_de_la_france where nom_de_la_region ='ile-de-france' group by  'id';
++------------------+
+| nom_de_la_region |
++------------------+
+| ile-de-france    |
++------------------+
+1 row in set (0.05 sec)
+
+mysql> select nom_de_la_region from rues_de_la_france where nom_de_la_region ='ile-de-france' group by id;
++------------------+
+| nom_de_la_region |
++------------------+
+| ile-de-france    |
+| ile-de-france    |
++------------------+
+2 rows in set (0.01 sec)
+
+mysql> select nom_de_la_region from rues_de_la_france where nom_de_la_region ='ile-de-france' group by id;
++------------------+
+| nom_de_la_region |
++------------------+
+| ile-de-france    |
+| ile-de-france    |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| practicedatabase   |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> create database demodatabase;
+Query OK, 1 row affected (0.12 sec)
+
+mysql> use default;
+ERROR 1049 (42000): Unknown database 'default'
+mysql> use demodatabase;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table customers(
+    -> CustomerId int,
+    -> Customername varchar(200),
+    -> contactName varchar(200),
+    -> Address varchar(215),
+    -> city varchar(25),
+    -> PostalCode int,
+    -> country varchar(22));
+Query OK, 0 rows affected (0.64 sec)
+
+mysql> show tables;
++------------------------+
+| Tables_in_demodatabase |
++------------------------+
+| customers              |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from customers;
+Empty set (0.00 sec)
+
+mysql> insert into customers values(1, 'steve','thomas','aubervilliers','paris',75001,'France');
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from customers;
++------------+--------------+-------------+---------------+-------+------------+---------+
+| CustomerId | Customername | contactName | Address       | city  | PostalCode | country |
++------------+--------------+-------------+---------------+-------+------------+---------+
+|          1 | steve        | thomas      | aubervilliers | paris |      75001 | France  |
++------------+--------------+-------------+---------------+-------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> insert into customers values(2,'alpha','Alpha MH','Gare de nord','paris',75010,'France);
+    '> ;
+    '>
+    '> jjj
+    '> ;
+    '> ;
+    '> ');
+Query OK, 1 row affected (0.15 sec)
+
+mysql> select  * from custors;
+ERROR 1146 (42S02): Table 'demodatabase.custors' doesn't exist
+mysql> select * from customers;
++------------+--------------+-------------+---------------+-------+------------+----------------------+
+| CustomerId | Customername | contactName | Address       | city  | PostalCode | country              |
++------------+--------------+-------------+---------------+-------+------------+----------------------+
+|          1 | steve        | thomas      | aubervilliers | paris |      75001 | France               |
+|          2 | alpha        | Alpha MH    | Gare de nord  | paris |      75010 | France);
+;
+
+jjj
+;
+;
+ |
++------------+--------------+-------------+---------------+-------+------------+----------------------+
+2 rows in set (0.00 sec)
+
+mysql> delete from customers where id = 2;
+ERROR 1054 (42S22): Unknown column 'id' in 'where clause'
+mysql> delete from customers where CustomerId = 2;
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select  * from customers;
++------------+--------------+-------------+---------------+-------+------------+---------+
+| CustomerId | Customername | contactName | Address       | city  | PostalCode | country |
++------------+--------------+-------------+---------------+-------+------------+---------+
+|          1 | steve        | thomas      | aubervilliers | paris |      75001 | France  |
++------------+--------------+-------------+---------------+-------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> insert into customers values(2,'Alfreds Futterkiste','Maria Anders','obere Str. 57','Berlin',12209,'Germany');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> insert into customers values(3,'Ana Trujillo Emparedados y helados','Ana Trujillo','Avda. de la Constitucion 2222','México D.F.',05021,'Mexico');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into customers values(3,'Antonio Moreno Taqueria','Antonio Moreno','Mataderos 2312','México D.F.',05023,'México');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> insert into customers values(4,'Around the horn','Thomas Hardy','120 Hanover Sq.','London',75012,'Paris');
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into customers values(5,'Berglunds snabbköp','christina Berglund','Bergusvägen 8','Lulea',75010,'Sweden');
+Query OK, 1 row affected (0.11 sec)
+
+mysql> slect * from customers;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'slect * from customers' at line 1
+mysql> select * from customers;
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+| CustomerId | Customername                       | contactName        | Address                       | city        | PostalCode | country |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+|          1 | steve                              | thomas             | aubervilliers                 | paris       |      75001 | France  |
+|          2 | Alfreds Futterkiste                | Maria Anders       | obere Str. 57                 | Berlin      |      12209 | Germany |
+|          3 | Ana Trujillo Emparedados y helados | Ana Trujillo       | Avda. de la Constitucion 2222 | México D.F. |       5021 | Mexico  |
+|          3 | Antonio Moreno Taqueria            | Antonio Moreno     | Mataderos 2312                | México D.F. |       5023 | México  |
+|          4 | Around the horn                    | Thomas Hardy       | 120 Hanover Sq.               | London      |      75012 | Paris   |
+|          5 | Berglunds snabbköp                 | christina Berglund | Bergusvägen 8                 | Lulea       |      75010 | Sweden  |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+6 rows in set (0.00 sec)
+
+mysql> select Customername from customers;
++------------------------------------+
+| Customername                       |
++------------------------------------+
+| steve                              |
+| Alfreds Futterkiste                |
+| Ana Trujillo Emparedados y helados |
+| Antonio Moreno Taqueria            |
+| Around the horn                    |
+| Berglunds snabbköp                 |
++------------------------------------+
+6 rows in set (0.00 sec)
+
+mysql> select country from customers;
++---------+
+| country |
++---------+
+| France  |
+| Germany |
+| Mexico  |
+| México  |
+| Paris   |
+| Sweden  |
++---------+
+6 rows in set (0.00 sec)
+
+mysql> select distinct(country) from customers;
++---------+
+| country |
++---------+
+| France  |
+| Germany |
+| Mexico  |
+| Paris   |
+| Sweden  |
++---------+
+5 rows in set (0.00 sec)
+
+mysql> select Customername from customers where country = 'Mexico';
++------------------------------------+
+| Customername                       |
++------------------------------------+
+| Ana Trujillo Emparedados y helados |
+| Antonio Moreno Taqueria            |
++------------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> select Customername from customers where country = 'México';
++------------------------------------+
+| Customername                       |
++------------------------------------+
+| Ana Trujillo Emparedados y helados |
+| Antonio Moreno Taqueria            |
++------------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from customers where customername like '%o';
+Empty set (0.06 sec)
+
+mysql> select * from customers where customername like '%a';
++------------+-------------------------+----------------+----------------+-------------+------------+---------+
+| CustomerId | Customername            | contactName    | Address        | city        | PostalCode | country |
++------------+-------------------------+----------------+----------------+-------------+------------+---------+
+|          3 | Antonio Moreno Taqueria | Antonio Moreno | Mataderos 2312 | México D.F. |       5023 | México  |
++------------+-------------------------+----------------+----------------+-------------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * from customer;
+ERROR 1146 (42S02): Table 'demodatabase.customer' doesn't exist
+mysql> select * from customers;
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+| CustomerId | Customername                       | contactName        | Address                       | city        | PostalCode | country |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+|          1 | steve                              | thomas             | aubervilliers                 | paris       |      75001 | France  |
+|          2 | Alfreds Futterkiste                | Maria Anders       | obere Str. 57                 | Berlin      |      12209 | Germany |
+|          3 | Ana Trujillo Emparedados y helados | Ana Trujillo       | Avda. de la Constitucion 2222 | México D.F. |       5021 | Mexico  |
+|          3 | Antonio Moreno Taqueria            | Antonio Moreno     | Mataderos 2312                | México D.F. |       5023 | México  |
+|          4 | Around the horn                    | Thomas Hardy       | 120 Hanover Sq.               | London      |      75012 | Paris   |
+|          5 | Berglunds snabbköp                 | christina Berglund | Bergusvägen 8                 | Lulea       |      75010 | Sweden  |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+6 rows in set (0.00 sec)
+
+mysql> select CustomerId from customers where city like M% AND country ="Mexico";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '% AND country ="Mexico"' at line 1
+mysql> select CustomerId from customers where city like M% AND country = "Mexico";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '% AND country = "Mexico"' at line 1
+mysql> select * from customers where city like M% AND country = "Mexico";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '% AND country = "Mexico"' at line 1
+mysql> select * from customers where city like 'M%' AND country = "Mexico";
++------------+------------------------------------+----------------+-------------------------------+-------------+------------+---------+
+| CustomerId | Customername                       | contactName    | Address                       | city        | PostalCode | country |
++------------+------------------------------------+----------------+-------------------------------+-------------+------------+---------+
+|          3 | Ana Trujillo Emparedados y helados | Ana Trujillo   | Avda. de la Constitucion 2222 | México D.F. |       5021 | Mexico  |
+|          3 | Antonio Moreno Taqueria            | Antonio Moreno | Mataderos 2312                | México D.F. |       5023 | México  |
++------------+------------------------------------+----------------+-------------------------------+-------------+------------+---------+
+2 rows in set (0.00 sec)
+
+mysql> select * from customers;
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+| CustomerId | Customername                       | contactName        | Address                       | city        | PostalCode | country |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+|          1 | steve                              | thomas             | aubervilliers                 | paris       |      75001 | France  |
+|          2 | Alfreds Futterkiste                | Maria Anders       | obere Str. 57                 | Berlin      |      12209 | Germany |
+|          3 | Ana Trujillo Emparedados y helados | Ana Trujillo       | Avda. de la Constitucion 2222 | México D.F. |       5021 | Mexico  |
+|          3 | Antonio Moreno Taqueria            | Antonio Moreno     | Mataderos 2312                | México D.F. |       5023 | México  |
+|          4 | Around the horn                    | Thomas Hardy       | 120 Hanover Sq.               | London      |      75012 | Paris   |
+|          5 | Berglunds snabbköp                 | christina Berglund | Bergusvägen 8                 | Lulea       |      75010 | Sweden  |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+6 rows in set (0.00 sec)
+
+mysql> select * from customers where Customername like 'A%'  OR postalcode like '%';
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+| CustomerId | Customername                       | contactName        | Address                       | city        | PostalCode | country |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+|          1 | steve                              | thomas             | aubervilliers                 | paris       |      75001 | France  |
+|          2 | Alfreds Futterkiste                | Maria Anders       | obere Str. 57                 | Berlin      |      12209 | Germany |
+|          3 | Ana Trujillo Emparedados y helados | Ana Trujillo       | Avda. de la Constitucion 2222 | México D.F. |       5021 | Mexico  |
+|          3 | Antonio Moreno Taqueria            | Antonio Moreno     | Mataderos 2312                | México D.F. |       5023 | México  |
+|          4 | Around the horn                    | Thomas Hardy       | 120 Hanover Sq.               | London      |      75012 | Paris   |
+|          5 | Berglunds snabbköp                 | christina Berglund | Bergusvägen 8                 | Lulea       |      75010 | Sweden  |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+6 rows in set (0.00 sec)
+
+mysql> select * from customers where Customername like 'A%'  OR postalcode like '%7';
++------------+------------------------------------+----------------+-------------------------------+-------------+------------+---------+
+| CustomerId | Customername                       | contactName    | Address                       | city        | PostalCode | country |
++------------+------------------------------------+----------------+-------------------------------+-------------+------------+---------+
+|          2 | Alfreds Futterkiste                | Maria Anders   | obere Str. 57                 | Berlin      |      12209 | Germany |
+|          3 | Ana Trujillo Emparedados y helados | Ana Trujillo   | Avda. de la Constitucion 2222 | México D.F. |       5021 | Mexico  |
+|          3 | Antonio Moreno Taqueria            | Antonio Moreno | Mataderos 2312                | México D.F. |       5023 | México  |
+|          4 | Around the horn                    | Thomas Hardy   | 120 Hanover Sq.               | London      |      75012 | Paris   |
++------------+------------------------------------+----------------+-------------------------------+-------------+------------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select * from customers where Customername like '%A'  OR postalcode like '%7';
++------------+-------------------------+----------------+----------------+-------------+------------+---------+
+| CustomerId | Customername            | contactName    | Address        | city        | PostalCode | country |
++------------+-------------------------+----------------+----------------+-------------+------------+---------+
+|          3 | Antonio Moreno Taqueria | Antonio Moreno | Mataderos 2312 | México D.F. |       5023 | México  |
++------------+-------------------------+----------------+----------------+-------------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select  * fro mcustomers;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'fro mcustomers' at line 1
+mysql> select * from customers;
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+| CustomerId | Customername                       | contactName        | Address                       | city        | PostalCode | country |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+|          1 | steve                              | thomas             | aubervilliers                 | paris       |      75001 | France  |
+|          2 | Alfreds Futterkiste                | Maria Anders       | obere Str. 57                 | Berlin      |      12209 | Germany |
+|          3 | Ana Trujillo Emparedados y helados | Ana Trujillo       | Avda. de la Constitucion 2222 | México D.F. |       5021 | Mexico  |
+|          3 | Antonio Moreno Taqueria            | Antonio Moreno     | Mataderos 2312                | México D.F. |       5023 | México  |
+|          4 | Around the horn                    | Thomas Hardy       | 120 Hanover Sq.               | London      |      75012 | Paris   |
+|          5 | Berglunds snabbköp                 | christina Berglund | Bergusvägen 8                 | Lulea       |      75010 | Sweden  |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+6 rows in set (0.00 sec)
+
+mysql> select * from customers where contactname Not 'Abhishek';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Abhishek'' at line 1
+mysql> select * from customers where NOT contactname = "Abhishek";
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+| CustomerId | Customername                       | contactName        | Address                       | city        | PostalCode | country |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+|          1 | steve                              | thomas             | aubervilliers                 | paris       |      75001 | France  |
+|          2 | Alfreds Futterkiste                | Maria Anders       | obere Str. 57                 | Berlin      |      12209 | Germany |
+|          3 | Ana Trujillo Emparedados y helados | Ana Trujillo       | Avda. de la Constitucion 2222 | México D.F. |       5021 | Mexico  |
+|          3 | Antonio Moreno Taqueria            | Antonio Moreno     | Mataderos 2312                | México D.F. |       5023 | México  |
+|          4 | Around the horn                    | Thomas Hardy       | 120 Hanover Sq.               | London      |      75012 | Paris   |
+|          5 | Berglunds snabbköp                 | christina Berglund | Bergusvägen 8                 | Lulea       |      75010 | Sweden  |
++------------+------------------------------------+--------------------+-------------------------------+-------------+------------+---------+
+6 rows in set (0.00 sec)
