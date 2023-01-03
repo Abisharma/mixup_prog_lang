@@ -2,6 +2,8 @@ In this repository we are going to learn about DataBase and how does it work wit
 In data definition we have different kinds of operation that use to perform creation of schema and in data manipulation we have operation
 that contain the operation for updation of table.
 
+SQL stands for structure query language that is used to store, manipulate and retrieve data from database.
+
 1. DATA DEFINITION OPERATION ARE FOLLOWING :-
  Topics:
    ALTER DATABASE
