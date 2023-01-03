@@ -21,3 +21,8 @@ where clause					we use the where clause in query when we need to retrieve the o
 						kind of operators to use in the condition for example =,<,>,<=,>=,Between,In,Like etc.
 						ex. select column_name from table_name where condition_by_using_existing_operators.
 	   
+
+Where clause with AND,OR,NOT Operators		we use AND,OR operators when we want to apply more than one condition to specify, if we want to retrieve a record from database when certain
+						is not true in that case we use NOT operator.
+
+ 
