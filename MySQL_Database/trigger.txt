@@ -31,3 +31,71 @@ mysql> insert into employee values('robin','scientist','2020-10-04',12),
     -> ('Antonio','business','2020-10-04',11);
 Query OK, 6 rows affected (0.16 sec)
 Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> select  * from employee;
+    -> //
++---------+------------+--------------+---------------+
+| name    | occupation | working_date | working_hours |
++---------+------------+--------------+---------------+
+| robin   | scientist  | 2020-10-04   | 12            |
+| warner  | engineer   | 2020-10-04   | 10            |
+| peter   | actor      | 2020-10-04   | 13            |
+| marco   | doctor     | 2020-10-04   | 14            |
+| brayden | teacher    | 2020-10-04   | 12            |
+| Antonio | business   | 2020-10-04   | 11            |
++---------+------------+--------------+---------------+
+6 rows in set (0.00 sec)
+
+mysql> end //
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'end' at line 1
+mysql> delimiter //
+mysql> create trigger before_insert_on_emp_working_hours
+    -> before insert on employee for each row
+    -> begin
+    -> if new.working_hours < 0 then set new.working_hours = 0;
+    -> end if;
+    -> end //
+Query OK, 0 rows affected (0.17 sec)
+
+
+mysql> insert into employee values('Markus','Former','2020-10-08',14);
+    -> //
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into employee values('Alexander','Actor','2020-10-012',-13);
+    -> //
+Query OK, 1 row affected (0.12 sec)
+
+mysql> select  * from employee;
+    -> //
++-----------+------------+--------------+---------------+
+| name      | occupation | working_date | working_hours |
++-----------+------------+--------------+---------------+
+| robin     | scientist  | 2020-10-04   | 12            |
+| warner    | engineer   | 2020-10-04   | 10            |
+| peter     | actor      | 2020-10-04   | 13            |
+| marco     | doctor     | 2020-10-04   | 14            |
+| brayden   | teacher    | 2020-10-04   | 12            |
+| Antonio   | business   | 2020-10-04   | 11            |
+| Markus    | Former     | 2020-10-08   | 14            |
+| Alexander | Actor      | 2020-10-12   | 0             |
++-----------+------------+--------------+---------------+
+8 rows in set (0.00 sec)
+
+mysql> delimiter ;
+mysql> select * from employee;
++-----------+------------+--------------+---------------+
+| name      | occupation | working_date | working_hours |
++-----------+------------+--------------+---------------+
+| robin     | scientist  | 2020-10-04   | 12            |
+| warner    | engineer   | 2020-10-04   | 10            |
+| peter     | actor      | 2020-10-04   | 13            |
+| marco     | doctor     | 2020-10-04   | 14            |
+| brayden   | teacher    | 2020-10-04   | 12            |
+| Antonio   | business   | 2020-10-04   | 11            |
+| Markus    | Former     | 2020-10-08   | 14            |
+| Alexander | Actor      | 2020-10-12   | 0             |
++-----------+------------+--------------+---------------+
+8 rows in set (0.00 sec)
+
+mysql>
