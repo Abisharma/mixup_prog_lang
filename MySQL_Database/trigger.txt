@@ -1,0 +1,33 @@
+mysql> create table employee(
+    -> name varcher(45) NOT NULL,
+    -> occupation varchar(35) NOT NULL,
+    -> working_date date,
+    -> working_hours varchar(10));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'varcher(45) NOT NULL,
+occupation varchar(35) NOT NULL,
+working_date date,
+workin' at line 2
+mysql> create table employee(
+    -> name varchar(45),
+    -> occupation varchar(35) NOT NULL,
+    -> working_date date,
+    -> working_hours varchar(10));
+Query OK, 0 rows affected (0.45 sec)
+
+mysql> insert into employee values('abhishek','Scientist','2020-10-04',12),
+    -> ('warner','engineer','2020-10-04',10),
+    -> ('peter','actor','2020-10-04',13),
+    -> ('Marco','Doctor','2020-10-04',14),
+    -> ('Brayden','Teacher','2020-10-04',12),
+    -> ('Antonio',Business','2020-10-04',11);
+    '> ';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '','2020-10-04',11);
+'' at line 6
+mysql> insert into employee values('robin','scientist','2020-10-04',12),
+    -> ('warner','engineer','2020-10-04',10),
+    -> ('peter','actor','2020-10-04',13),
+    -> ('marco','doctor','2020-10-04',14),
+    -> ('brayden','teacher','2020-10-04',12),
+    -> ('Antonio','business','2020-10-04',11);
+Query OK, 6 rows affected (0.16 sec)
+Records: 6  Duplicates: 0  Warnings: 0
