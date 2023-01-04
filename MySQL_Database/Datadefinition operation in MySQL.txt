@@ -38,4 +38,8 @@ SQL Delete; 					If we want to delete an existing records from a table we use th
 
 SQL MIN,MAX,count; 				when we need to get minimum and maximum from a field we use min(column_name) or max(column_name) and to 
 						count the number of records of a field we need count(column_name).
+
+
+
+
  
