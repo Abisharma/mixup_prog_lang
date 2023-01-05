@@ -1,0 +1,119 @@
+mysql> create table teacher(
+    -> id int not null primary key,
+    -> course_name varchar(120),
+    -> teacher_name varchar(150));
+Query OK, 0 rows affected (1.22 sec)
+
+
+mysql> select * from teacher;
+Empty set (0.00 sec)
+
+
+mysql> desc teacher;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| id           | int(11)      | NO   | PRI | NULL    |       |
+| course_name  | varchar(120) | YES  |     | NULL    |       |
+| teacher_name | varchar(150) | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
+
+
+mysql> show columns from teacher;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| id           | int(11)      | NO   | PRI | NULL    |       |
+| course_name  | varchar(120) | YES  |     | NULL    |       |
+| teacher_name | varchar(150) | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+
+
+mysql> show full columns from teacher;
++--------------+--------------+--------------------+------+-----+---------+-------+---------------------------------+---------+
+| Field        | Type         | Collation          | Null | Key | Default | Extra | Privileges                      | Comment |
++--------------+--------------+--------------------+------+-----+---------+-------+---------------------------------+---------+
+| id           | int(11)      | NULL               | NO   | PRI | NULL    |       | select,insert,update,references |         |
+| course_name  | varchar(120) | utf8mb4_0900_ai_ci | YES  |     | NULL    |       | select,insert,update,references |         |
+| teacher_name | varchar(150) | utf8mb4_0900_ai_ci | YES  |     | NULL    |       | select,insert,update,references |         |
++--------------+--------------+--------------------+------+-----+---------+-------+---------------------------------+---------+
+3 rows in set (0.00 sec)
+
+
+mysql> insert  into teacher values(1,'jardinage','thomas');
+Query OK, 1 row affected (0.16 sec)
+
+mysql> insert into teacher values('2','historie de la chine et vieatnam','alpha'),(3,'programmation','emmanual'),(4,'immobilier','houdha'),(5,'banque','alexis');
+Query OK, 4 rows affected (0.15 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+
+
+mysql> select * from teacher;
++----+----------------------------------+--------------+
+| id | course_name                      | teacher_name |
++----+----------------------------------+--------------+
+|  1 | jardinage                        | thomas       |
+|  2 | historie de la chine et vieatnam | alpha        |
+|  3 | programmation                    | emmanual     |
+|  4 | immobilier                       | houdha       |
+|  5 | banque                           | alexis       |
++----+----------------------------------+--------------+
+5 rows in set (0.00 sec)
+
+
+
+mysql> create table teacher_contact(
+    -> teacher_id int,
+    -> email varchar(156) not null,
+    -> mobile int,
+    -> constraint key_for_for_teacher_id foreign key (teacher_id) references teacher(id));
+Query OK, 0 rows affected (0.98 sec)
+
+
+mysql> desc teacher_contact;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| teacher_id | int(11)      | YES  | MUL | NULL    |       |
+| email      | varchar(156) | NO   |     | NULL    |       |
+| mobile     | int(11)      | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+
+mysql> show columns from teacher_contact;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| teacher_id | int(11)      | YES  | MUL | NULL    |       |
+| email      | varchar(156) | NO   |     | NULL    |       |
+| mobile     | int(11)      | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+
+
+mysql> show full columns from teacher_contact;
++------------+--------------+--------------------+------+-----+---------+-------+---------------------------------+---------+
+| Field      | Type         | Collation          | Null | Key | Default | Extra | Privileges                      | Comment |
++------------+--------------+--------------------+------+-----+---------+-------+---------------------------------+---------+
+| teacher_id | int(11)      | NULL               | YES  | MUL | NULL    |       | select,insert,update,references |         |
+| email      | varchar(156) | utf8mb4_0900_ai_ci | NO   |     | NULL    |       | select,insert,update,references |         |
+| mobile     | int(11)      | NULL               | YES  |     | NULL    |       | select,insert,update,references |         |
++------------+--------------+--------------------+------+-----+---------+-------+---------------------------------+---------+
+3 rows in set (0.00 sec)
+
+
+
+mysql> insert into teacher_contact values(1,'t@t.com',5449734);
+Query OK, 1 row affected (0.14 sec)
+
+
+
+mysql> insert into teacher_contact values(2,'a@a.com',5768),(3,'e@e.com',98354),(4,'h@h.com',41286),(5,'a@a.com',75315);
+Query OK, 4 rows affected (0.15 sec)
+Records: 4  Duplicates: 0  Warnings: 0
