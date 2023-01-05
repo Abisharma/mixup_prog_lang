@@ -117,3 +117,109 @@ Query OK, 1 row affected (0.14 sec)
 mysql> insert into teacher_contact values(2,'a@a.com',5768),(3,'e@e.com',98354),(4,'h@h.com',41286),(5,'a@a.com',75315);
 Query OK, 4 rows affected (0.15 sec)
 Records: 4  Duplicates: 0  Warnings: 0
+
+
+mysql> create view first_view_example as
+    -> select id, course_name, teacher_name
+    -> from teacher;
+Query OK, 0 rows affected (0.19 sec)
+
+
+
+mysql> select * from first_view_example;
++----+----------------------------------+--------------+
+| id | course_name                      | teacher_name |
++----+----------------------------------+--------------+
+|  1 | jardinage                        | thomas       |
+|  2 | historie de la chine et vieatnam | alpha        |
+|  3 | programmation                    | emmanual     |
+|  4 | immobilier                       | houdha       |
+|  5 | banque                           | alexis       |
++----+----------------------------------+--------------+
+5 rows in set (0.03 sec)
+
+
+
+mysql> select teacher_name from first_view_example;
++--------------+
+| teacher_name |
++--------------+
+| thomas       |
+| alpha        |
+| emmanual     |
+| houdha       |
+| alexis       |
++--------------+
+5 rows in set (0.00 sec)
+
+
+
+
+mysql> alter view first_view_example as
+    -> select t.id,t.teacher_name,tc.mobile,tc.email
+    -> from teacher t, teacher_contact tc;
+Query OK, 0 rows affected (0.25 sec)
+
+
+
+
+mysql> select * from first_view_example;
++----+--------------+---------+---------+
+| id | teacher_name | mobile  | email   |
++----+--------------+---------+---------+
+|  1 | thomas       | 5449734 | t@t.com |
+|  2 | alpha        | 5449734 | t@t.com |
+|  3 | emmanual     | 5449734 | t@t.com |
+|  4 | houdha       | 5449734 | t@t.com |
+|  5 | alexis       | 5449734 | t@t.com |
+|  1 | thomas       |    5768 | a@a.com |
+|  2 | alpha        |    5768 | a@a.com |
+|  3 | emmanual     |    5768 | a@a.com |
+|  4 | houdha       |    5768 | a@a.com |
+|  5 | alexis       |    5768 | a@a.com |
+|  1 | thomas       |   98354 | e@e.com |
+|  2 | alpha        |   98354 | e@e.com |
+|  3 | emmanual     |   98354 | e@e.com |
+|  4 | houdha       |   98354 | e@e.com |
+|  5 | alexis       |   98354 | e@e.com |
+|  1 | thomas       |   41286 | h@h.com |
+|  2 | alpha        |   41286 | h@h.com |
+|  3 | emmanual     |   41286 | h@h.com |
+|  4 | houdha       |   41286 | h@h.com |
+|  5 | alexis       |   41286 | h@h.com |
+|  1 | thomas       |   75315 | a@a.com |
+|  2 | alpha        |   75315 | a@a.com |
+|  3 | emmanual     |   75315 | a@a.com |
+|  4 | houdha       |   75315 | a@a.com |
+|  5 | alexis       |   75315 | a@a.com |
++----+--------------+---------+---------+
+25 rows in set (0.00 sec)
+
+
+mysql> Drop view first_view_example;
+Query OK, 0 rows affected (0.14 sec)
+
+
+mysql> select * from first_view_example;
+ERROR 1146 (42S02): Table 'demodatabase.first_view_example' doesn't exist
+
+
+mysql> create view first_view_example as
+    -> select t.id,t.course_name,t.teacher_name,tc.email,tc.mobile
+    -> from teacher t, teacher_contact tc
+    -> where t.id = tc.teacher_id;
+Query OK, 0 rows affected (0.13 sec)
+
+
+mysql> select * from first_view_example;
++----+----------------------------------+--------------+---------+---------+
+| id | course_name                      | teacher_name | email   | mobile  |
++----+----------------------------------+--------------+---------+---------+
+|  1 | jardinage                        | thomas       | t@t.com | 5449734 |
+|  2 | historie de la chine et vieatnam | alpha        | a@a.com |    5768 |
+|  3 | programmation                    | emmanual     | e@e.com |   98354 |
+|  4 | immobilier                       | houdha       | h@h.com |   41286 |
+|  5 | banque                           | alexis       | a@a.com |   75315 |
++----+----------------------------------+--------------+---------+---------+
+5 rows in set (0.00 sec)
+
