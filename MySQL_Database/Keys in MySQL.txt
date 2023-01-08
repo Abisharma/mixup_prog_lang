@@ -1,0 +1,156 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| demodatabase       |
+| information_schema |
+| mysql              |
+| performance_schema |
+| practicedatabase   |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+8 rows in set (0.01 sec)
+
+mysql> use demodatabase;
+Database changed
+mysql> show tables;
++------------------------+
+| Tables_in_demodatabase |
++------------------------+
+| customers              |
+| employee               |
+| first_view_example     |
+| products               |
+| student                |
+| teacher                |
+| teacher_contact        |
++------------------------+
+7 rows in set (0.01 sec)
+
+mysql> create table student2(
+    -> stud_id int not null unique,
+    -> name varchar(45),
+    -> email varchar(45),
+    -> age int,
+    -> city varchar(25));
+Query OK, 0 rows affected (0.53 sec)
+
+mysql> insert into student2 (stud_id, name, email, age, city) values(1,'abhishek','a@a.com',22,'paris'),(2,'thomas','t@t.com',23,'texas'),(3,'alpha','al@al.com',25,'montpellier');
+Query OK, 3 rows affected (0.10 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from student2;
++---------+----------+-----------+------+-------------+
+| stud_id | name     | email     | age  | city        |
++---------+----------+-----------+------+-------------+
+|       1 | abhishek | a@a.com   |   22 | paris       |
+|       2 | thomas   | t@t.com   |   23 | texas       |
+|       3 | alpha    | al@al.com |   25 | montpellier |
++---------+----------+-----------+------+-------------+
+3 rows in set (0.00 sec)
+
+
+mysql> insert into student2 values(1,'steve','st@st.com',26,'metz');
+ERROR 1062 (23000): Duplicate entry '1' for key 'stud_id'
+mysql> -- if we want to define the unique key to the multiple columns
+mysql> create table student3(
+    -> stud_id int,
+    -> roll_no int,
+    -> name varchar(45) not null,
+    -> email varchar(45),
+    -> age int,
+    -> city varchar(25),
+    -> constraint unique_key_for_roll_no_email unique(roll_no,email));
+Query OK, 0 rows affected (0.72 sec)
+
+mysql> show columns from student3;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| stud_id | int(11)     | YES  |     | NULL    |       |
+| roll_no | int(11)     | YES  | MUL | NULL    |       |
+| name    | varchar(45) | NO   |     | NULL    |       |
+| email   | varchar(45) | YES  |     | NULL    |       |
+| age     | int(11)     | YES  |     | NULL    |       |
+| city    | varchar(25) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+6 rows in set (0.03 sec)
+
+mysql> show index from student3;
++----------+------------+------------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table    | Non_unique | Key_name                     | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++----------+------------+------------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| student3 |          0 | unique_key_for_roll_no_email |            1 | roll_no     | A         |           0 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| student3 |          0 | unique_key_for_roll_no_email |            2 | email       | A         |           0 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
++----------+------------+------------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+2 rows in set (0.20 sec)
+
+mysql> -- we can also drop the unique key
+mysql> -- the alter table statement allows us to drop the unique key
+mysql> alter table student3 drop index unique_key_for_roll_no_email;
+Query OK, 0 rows affected (0.55 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> show index from student3;
+Empty set (0.00 sec)
+
+mysql> -- we can create the unique key by using the alter table command as below
+mysql> show tables;
++------------------------+
+| Tables_in_demodatabase |
++------------------------+
+| customers              |
+| employee               |
+| first_view_example     |
+| products               |
+| student                |
+| student2               |
+| student3               |
+| teacher                |
+| teacher_contact        |
++------------------------+
+9 rows in set (0.00 sec)
+
+mysql> drop table student3;
+Query OK, 0 rows affected (0.41 sec)
+
+mysql> show tables;
++------------------------+
+| Tables_in_demodatabase |
++------------------------+
+| customers              |
+| employee               |
+| first_view_example     |
+| products               |
+| student                |
+| student2               |
+| teacher                |
+| teacher_contact        |
++------------------------+
+8 rows in set (0.00 sec)
+
+mysql> create table student3(
+    -> stud_id int,
+    -> roll_no int,
+    -> name varchar(45) not null,
+    -> email varchar(45),
+    -> age int,
+    -> city varchar(25));
+Query OK, 0 rows affected (0.46 sec)
+
+mysql> -- as we have recreat student3 table and didn't specified the unique so now we are going to use the alter command
+mysql> -- to specify the unisue key into the existing table
+mysql> alter table student3 add constraint unique_key_for_roll_no_email unique(roll_no, email);
+Query OK, 0 rows affected (0.48 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> show index from student3;
++----------+------------+------------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table    | Non_unique | Key_name                     | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++----------+------------+------------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| student3 |          0 | unique_key_for_roll_no_email |            1 | roll_no     | A         |           0 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| student3 |          0 | unique_key_for_roll_no_email |            2 | email       | A         |           0 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
++----------+------------+------------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+2 rows in set (0.11 sec)
