@@ -56,6 +56,91 @@ Console.WriteLine("number is odd");
 }
 
 
+3. Simple If-Else block with input from user :- in this block we have specified to get an input from a user and apply the condition to control the flow of the code execution.
+
+using System;
+
+namespace working_with_online_editor{
+
+public class If_Else_Block_With_User_Input{
+
+public static void Main(String[] args){
+
+Console.WriteLine("enter a number");
+
+int num = Convert.ToInt32(Console.ReadLine());
+
+if(num % 2 == 0)
+{
+
+Console.WriteLine("number is even");
+
+}
+
+
+else{
+
+Console.WriteLine("number is odd");
+
+}
+}
+
+}
+
+}
+
+
+4.if - else-if ladder :- By using the if- else-if ladder we can specify multiple condition if none of the existing condition get execute then block of code present into
+the else part going to execute.
+
+
+
+using System;
+
+namespace working_with_online_editor{
+
+public class If_ElseIf_Ladder{
+
+public static void Main(String[]  args){
+
+Console.WriteLine("enter the number to check the grade ");
+
+int num = Convert.ToInt32(Console.ReadLine());
+
+if(num < 0 || num > 100){
+
+Console.WriteLine("You have entered the wrong number");
+
+}
+
+else if(num >= 0 && num <50){
+
+Console.WriteLine("Fail");
+
+}
+
+
+else if(num>= 60 && num<70){
+
+Console.WriteLine("D Grade");
+}
+
+else{
+
+Console.WriteLine("as mentioned above we can add multiple condition to control the flow of the code execution ");
+
+}
+
+}
+
+}
+
+}
+
+
+
+
+
 
 
 
