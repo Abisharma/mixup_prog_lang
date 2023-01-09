@@ -1,1 +1,24 @@
 This file contains examples of control statements that we use in c-sharp programming language to control the flow of program execution.
+
+1. Simple if example :- basically if control statement is used to control the flow of execution of the program, the execution of code depends on the conditioin that
+we specified into the if block.
+
+using System;
+
+namespace working_with_online_editor{
+
+public class First_If_Example{
+
+public static void Main(String[] args){
+
+int num = 10;
+
+if(num%2 == 0){
+Console.WriteLine("the number is even");
+}
+
+}
+
+}
+
+}
