@@ -140,6 +140,53 @@ Console.WriteLine("as mentioned above we can add multiple condition to control t
 
 
 
+5. SWITCH Statement :- we can use switch statement to control the flow of the execution of the code as given below.
+
+using System;
+
+namespace working_with_online_editor{
+
+public class Switch_Statement{
+
+public static void Main(String[] args){
+
+Console.WriteLine("enter a number");
+
+int num = Convert.ToInt32(Console.ReadLine());
+
+switch (num){
+
+case 10: Console.WriteLine("the entered number is 10");
+break;
+
+case 20: Console.WriteLine("the entered number is 20");
+break;
+
+case 30: Console.WriteLine("the entered number is 30");
+break;
+
+
+default: Console.WriteLine("the entered number is not 10,20 and 30 ");
+break;
+
+}
+
+
+}
+
+
+}
+
+
+
+}
+
+
+6. For loop :- to make our code more fast and less lengthy we need to use the loops there are multiple kind of loops are introduced to c-sharp, basically we uses loops when we want to
+execute the block of code to be executed multiple times unitl the certain condition is not going to be false in that case we do need to use the for loop, there are other options 
+as well but we use concerned to fulfill the required;
+
+
 
 
 
