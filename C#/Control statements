@@ -22,3 +22,40 @@ Console.WriteLine("the number is even");
 }
 
 }
+
+
+
+2. Simple If-Else example:- in this control flow statement we can specify the block of the code that is going to be execute if the condition is not set to be true.
+
+using System;
+
+namespace working_with_online_editor{
+
+public class If_Else_Example{
+
+public static void Main(String[] args){
+
+int num = 11;
+
+if(num%2==0){
+
+Console.WriteLine("the number is even");
+
+}
+
+else{
+
+Console.WriteLine("number is odd");
+
+}
+
+}
+
+}
+
+}
+
+
+
+
+
