@@ -445,3 +445,35 @@ public static void Main(String[] args){
 
 }
 
+
+9. Break :- Basically break statement is used to control the flow of the code execution, if certain condition is true inside the loop then break is used to stop the execution, if we have
+a nested for loop then the execution of thr inner loop is going to stop and then compiler is going to execute the next statement of the outer loop.
+
+//Simple example of the break statement.
+using System;
+
+public class BreakExample{
+
+void display(){
+				
+                for(int i =1; i<=10; i++)
+                	{
+                    	Console.WriteLine("value of i is "+i);
+                        if(i == 5){
+                        	
+                            break;
+                        }
+                    }
+                
+                }
+
+
+public static void Main(String[] args){
+		
+        BreakExample be = new BreakExample();
+        be.display();
+        
+}
+
+
+}
