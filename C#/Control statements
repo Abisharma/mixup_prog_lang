@@ -477,3 +477,80 @@ public static void Main(String[] args){
 
 
 }
+
+// break inside the nested looping statements.
+
+using System;
+
+public class NestedBreak{
+			
+            public static void Main(String[] args){
+            
+            for(int row=1; row<=3; row++){
+            		
+                    for(int col = 1; col<=3; col++){
+                    		
+                            if(row == 2 && col == 2)
+                            {		
+                            		Console.WriteLine("as condition is true we are going to break the inner loop");
+                                    break;
+                            }
+                            
+                            Console.WriteLine(row +" "+col);
+                            
+                    }
+                                
+                                
+            }
+            
+            }
+            
+}
+
+
+10. Continue :- Basically continue statement is used to continue the current flow of execution of the program without executing the remaining code at the specified condition.
+in case nested for loops it will continue within the inner loop.
+
+using System;
+
+public class ContinueStatement{
+
+	public static void Main(String[] args){
+    	
+        for(int i =1; i<=10; i++){
+        	if(i ==5) continue;
+        	Console.WriteLine("value of i "+i);
+            
+            }
+        
+    	
+    }
+
+}
+
+
+//Continue with nested for loops.
+
+using System;
+
+public class NestedContinue{
+	
+    public static void Main(String[] args){
+    		
+            for(int i =1; i<=3; i++){
+            		for(int j =1; j<=3; j++){
+                    		if(i==2 && j==2){
+                            Console.WriteLine("As our condition is going to be true, now continue statement is going to execute");
+                            continue;
+                            }
+                            Console.WriteLine(i + " " +j);
+                            }
+            }
+            
+            }
+    
+	
+}
+
+
+
