@@ -553,4 +553,37 @@ public class NestedContinue{
 }
 
 
+11. GOTO Statement :- It is not recommended to use the goto statement in Program as it can make the program complex, goto is also known as jump statement, it is used to
+control the flow of the program's esecution.
+
+using System;
+
+class GoToStatement{
+	
+    
+    
+    public static void Main(String[] args)
+    {
+    	ineligible:
+        	Console.WriteLine("person is not eligible to vote");
+            Console.WriteLine("enter the age of person");
+        	int age = Convert.ToInt32( Console.ReadLine());
+        
+        if(age<18){
+        goto ineligible;
+        }
+        
+        else{
+        	Console.WriteLine("Person is eligible to vote");
+        }
+     	   
+     }
+    
+    
+}
+
+12 Comment :- we can add the comment inside the program by using // . Basically we use the comment to specify the use of the statement that is going to execute, to give the 
+explanation to  the user or developer. Statement that is followed by // symbol is not going to execute by the compiler.  
+
+
 
