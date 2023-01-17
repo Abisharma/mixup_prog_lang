@@ -253,4 +253,114 @@ Console.WriteLine("infinite loop");
 }
 
 
+7. While Loop :- It is recommended to use the while loop in general, we use the while loop when we want to execute the block of certain code until a condition is not going to be false;
 
+
+// A Simple while loop example.
+ 
+using System;
+
+public class InfiniteForLoop{
+
+public static void Main(String[] args){
+
+// the following statement represents the infinite for loop
+
+for(;;){
+
+Console.WriteLine("infinite loop");
+
+}
+
+}
+
+
+
+} 
+
+
+// Display the values of the rows and columns by using the nested while loops.
+using System;
+
+
+
+public class NestedWhileLoop{
+
+public void DisplayWithNestedWhileloop(){
+
+Console.WriteLine("pring the row and column value by using nested while loop");
+
+
+int row =1;
+
+while(row<=3){
+	
+    int column = 1;
+	while(column<=3){
+    
+    Console.WriteLine(row + " " +column);
+    
+    column++;
+    }
+
+row++;
+
+}
+
+}
+
+public static void Main(String[] args){
+
+NestedWhileLoop nw = new NestedWhileLoop();
+
+nw.DisplayWithNestedWhileloop();
+
+}
+
+
+}
+
+
+
+
+// infinite while loop program.
+
+using System;
+
+
+
+public class NestedWhileLoop{
+
+public void DisplayWithNestedWhileloop(){
+
+Console.WriteLine("pring the row and column value by using nested while loop");
+
+
+int row =1;
+
+while(row<=3){
+	
+    int column = 1;
+	while(column<=3){
+    
+    Console.WriteLine(row + " " +column);
+    
+    column++;
+    }
+
+row++;
+
+}
+
+}
+
+public static void Main(String[] args){
+
+NestedWhileLoop nw = new NestedWhileLoop();
+
+nw.DisplayWithNestedWhileloop();
+
+}
+
+
+}
