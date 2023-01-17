@@ -364,3 +364,84 @@ nw.DisplayWithNestedWhileloop();
 
 
 }
+
+
+8. Do While loop :- when we do want to execute the block of code at least once, it doesn't matter if condition is true or not, in that case we use the do-while loop.
+
+using System;
+
+
+public class DoWhile {
+
+
+public static void Main(String[] args){
+int i =1;
+
+do{
+
+Console.WriteLine("print the value of i "+i);
+i++;
+
+}while(i<=10);
+
+}
+
+
+}
+
+// Nested do while example
+
+using System;
+
+public class NestedDoWhileExample{
+
+public void NestedDoWhile(){
+
+int row = 1;
+
+do{
+	int col = 1;
+do{
+	
+   	Console.WriteLine(row +" " + col);
+    col++;
+    }while(col <=3);
+
+row++;
+}while(row<=3);
+
+}
+
+
+public static void Main(String[] args){
+								
+                                
+                                NestedDoWhileExample ndw = new NestedDoWhileExample();
+                                
+                                ndw.NestedDoWhile();
+
+}
+
+}
+
+
+// Infinite do-while example
+
+using System;
+
+public class InfiniteDoW{
+
+public static void Main(String[] args){
+		
+        
+        do{
+			
+            Console.WriteLine("infinite do-while loop");
+                    
+        }while(true);
+
+
+}
+
+}
+
