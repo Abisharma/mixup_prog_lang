@@ -187,7 +187,70 @@ execute the block of code to be executed multiple times unitl the certain condit
 as well but we use concerned to fulfill the required;
 
 
+using System;
 
+
+public class ForloopExample{
+
+public static void Main(String[] args){
+
+for(int i=0; i<10; i++){
+
+Console.WriteLine("value of i is " + i);
+
+}
+
+}
+
+
+}
+
+
+// example of nested for loop.
+
+
+using System;
+
+public class NestedForLoop{
+
+public static void Main(String[] args)
+{
+
+for(int row=1; row <=3; row++ )
+{
+	for(int column = 1; column<=3; column++){
+    
+    	Console.WriteLine(row+" "+column);
+    
+    }
+
+}
+
+
+}
+
+
+
+
+using System;
+
+public class InfiniteForLoop{
+
+public static void Main(String[] args){
+
+// the following statement represents the infinite for loop
+
+for(;;){
+
+Console.WriteLine("infinite loop");
+
+}
+
+}
+
+
+
+}
 
 
 
