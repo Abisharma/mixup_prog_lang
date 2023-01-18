@@ -1,0 +1,28 @@
+
+
+
+
+
+using System;
+
+class ArrayExample{
+    
+    public static void Main(String[] args){
+        // there different type of array declaration and initialization 
+        //following first_array is the single dimenstional array
+        int[] first_array = new int[10];
+        first_array[0] = 12;
+        first_array[2] = 13;
+        first_array[5] = 14;
+        first_array[9] = 15;
+        
+        // by following way we can traverse the array element
+        for(int i =0; i<first_array.Length; i++){
+                Console.WriteLine("array element at the index is " + first_array[i] );
+        }
+        
+        
+        
+    }
+    
+}
