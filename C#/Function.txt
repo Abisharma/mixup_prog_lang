@@ -134,7 +134,8 @@ class ReferenceParameter{
     
 }
 
-// OUT REF example
+3. Apart from the ref keyword that we use to pass the parameters as a references parameter we can also use the OUT keyword, we use the OUT keyword when we want to return the multiple 
+values from the function, as we can not use multiple return statement within the same function.
 
 
 using System;
