@@ -133,4 +133,42 @@ class ReferenceParameter{
     
     
 }
+
+// OUT REF example
+
+
+using System;
+
+class OutRef{
+	
+	void display(out int uservalue1, out int uservalue2){
+	    
+	    Console.WriteLine("inside the display funtion of out reference function before modification of user values");
+	    uservalue1 = 10;
+	    uservalue2 = 20;
+	   uservalue1 = uservalue1 * 10;
+	    uservalue2 = uservalue2 * 10;
+	    
+	}
+	
+    public static void Main(String[] args){
+        
+        
+    	int user_input1 = Convert.ToInt32(Console.ReadLine());
+        
+        int user_input2= Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine("First user input before calling the out reference function is   "+ user_input1 + "Second user input before calling the out reference value is  "+ user_input2);
+            
+            
+            OutRef or = new OutRef();
+            
+            or.display(out user_input1, out user_input2);
+            Console.WriteLine("returning from the display function ");
+            Console.WriteLine("First user value after modification is  " + user_input1 + "Second user value after modification is  " + user_input2 );
+        
+        
+        }
+    
+}
  
