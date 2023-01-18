@@ -1,0 +1,9 @@
+In programming language instead of repeating the number of lines of code we use functions/methods, functions is used to execute the block of code.
+It has certain property to specify that are 
+	1. Function_Name :- it is an unique name that is used to call the function.
+	2. Parameters :- a function contains number of parameters that are going to be used by it during the execution of block of code, a function that doesn't 
+	contain parameter is also known as non-parameterized function.
+	3.Access Specifiers :- Access modifiers makes the function acessable within the certain space depending on the access modifiers.
+	4.return type :- A function returns the values must specifies the return type of the returning value during the definition of function.
+	5.Function body :- function body contains the block of code that is going to execute by the function.
+ 
