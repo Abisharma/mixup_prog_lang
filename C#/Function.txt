@@ -31,3 +31,50 @@ public static void Main(String[] args){
 
 2. Function that return void with parameters.
 
+using System;
+
+class FunctionWithParameter{
+	
+    //function with parameter message of String type
+    void display(String message){
+Console.WriteLine("Hello"+message);
+        
+        }
+        
+        
+        public static void Main(String[] args){
+        	
+            String message_to_pass;
+            message_to_pass = Console.ReadLine();
+            FunctionWithParameter fwp = new FunctionWithParameter();
+// passing the String type parameter to the function
+fwp.display(message_to_pass);
+                   
+        }
+    
+}
+
+3. Function with return type 
+
+using System;
+
+class FunctionWithReturnType{
+
+String display(String message){
+	
+    Console.WriteLine("inside display function with return type");
+        return message;
+    }
+    
+    
+    public static void Main(String[] args){
+    	
+        FunctionWithReturnType fwrt = new FunctionWithReturnType();
+        String message_to_pass = Console.ReadLine();
+        String receieve_message_from_function = fwrt.display(message_to_pass);
+        Console.WriteLine("hello   " + receieve_message_from_function);
+        
+    }
+
+
+}
