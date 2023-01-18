@@ -109,4 +109,28 @@ class FunctionWithCallByValue{
 }
 
 
-2. 
+2.The second of passing parameter is as referebce type, basically when we pass value as a reference type we pass the reference of the original value instead of the copy of the 
+original value. so if we perform any changement in the function on the reference value the original value is also going to change.
+using System;
+
+class ReferenceParameter{
+    
+    int display(ref int input_data){
+        Console.WriteLine("inside the reference parameter function ");
+        
+        return input_data = input_data * 2;
+    }
+    
+    public static void Main(String[] args){
+        ReferenceParameter rp = new ReferenceParameter();
+        int input_from_user = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("before calling reference function user input is " + input_from_user);
+        rp.display(ref input_from_user);
+        Console.WriteLine("returning from reference parameter function");
+        Console.WriteLine("user input after performing operation on user input inside the reference parpameter function  " + input_from_user );
+    }
+    
+    
+    
+}
+ 
