@@ -78,3 +78,35 @@ String display(String message){
 
 
 }
+
+//  On basis of parameters the functions are categorized into callbyvalue function,  call by reference and out parameter.
+
+1. Program to display the square of the user input value by the use of call by value parameter
+using System;
+class FunctionWithCallByValue{
+    
+    //function with call by value parameter 
+    public int getSquare(int receieve_input){
+        
+        Console.WriteLine("Inside the call by value parameter function");
+        //returning the square of the parameter
+        return receieve_input = receieve_input * receieve_input;
+        
+    }
+    
+    
+    public static void Main(String[] args){
+        //getting the input from user
+        int input = Convert.ToInt32(Console.ReadLine());
+        FunctionWithCallByValue fwcbv = new FunctionWithCallByValue();
+        
+        //calling the function to get the square of the input number
+        int output_to_display = fwcbv.getSquare(input);
+        Console.WriteLine("Square of "+ input + "  is  "+output_to_display);
+        
+    }
+    
+}
+
+
+2. 
