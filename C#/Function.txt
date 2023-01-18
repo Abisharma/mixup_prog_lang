@@ -6,4 +6,28 @@ It has certain property to specify that are
 	3.Access Specifiers :- Access modifiers makes the function acessable within the certain space depending on the access modifiers.
 	4.return type :- A function returns the values must specifies the return type of the returning value during the definition of function.
 	5.Function body :- function body contains the block of code that is going to execute by the function.
- 
+
+
+1. Function that returns nothing or returns void and non-parametrized.
+using System;
+
+public class FunctionEx{
+
+//Function that return void
+void display(){
+	Console.WriteLine("this function is returning void ");
+    }
+
+
+public static void Main(String[] args){
+		FunctionEx fe = new FunctionEx();
+        
+        // function calling statement
+        fe.display();
+        
+        }
+}
+
+
+2. Function that return void with parameters.
+
