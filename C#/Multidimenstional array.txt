@@ -1,0 +1,8 @@
+Multi dimenstional array is used to stored the data in the form of matrix, that is consist of row and column(tabular form). to declare the multidimenstional array we 
+need to specify the comma operator inside the square brackets as below;
+
+// example of 2D array
+int[,] array_two_Dimenstional = new int[3,3];
+int[,] array_two_Dimenstional = new int[,]{{1,2,3},{4,5,6},{7,8,9}};
+int[,] array_Two_Dimenstional = new int[]{{1,2,3},{4,5,6},{7,8,9}};
+
