@@ -2,7 +2,13 @@ In C# programming, array is an bast type object i.e. System.Array. We use array 
 we can store only fixed number of data that is also known as the disadvantage of array.
 
 
-
+ADVANTAGES OF AN ARRAY:-
+			1. Easy access to the array elements.
+			2. Easy to manipulate the array elements.
+			3. Easy to traverse the array elements.
+			4. Easy to sort the array elements.
+			5. Code optimization.
+ 
 
 using System;
 
@@ -73,5 +79,79 @@ class ArrayExample{
         
     } 
 }
+
+
+// Below program is used to find the minimum and maximum element from the array.
+using System;
+
+//This program is used to find the minimum and maximum number from an array that is passed to a method
+
+class ArrayMinMax{
+    
+    int display_min(int[] input_array){
+        
+        Console.WriteLine("inside the display method to find the minimum number from the array");
+        int min = input_array[0];
+        for(int input = 1; input < input_array.Length; input++){
+            
+            if(input_array[input] < min){
+                
+                min = input_array[input];
+                
+            }
+            
+            else{
+                Console.WriteLine("array element that present on index number   " +input+" is not a minimum number" );
+            }
+            
+            
+        }
+        return min;
+    }
+    
+    int display_max(int[] input_array){
+        
+        Console.WriteLine("inside the display_max method to find the maximum number  passed array");
+        int max = input_array[0];
+        for(int input = 0; input<input_array.Length; input++){
+            
+            if(max<input_array[input]){
+                
+                max = input_array[input];
+                
+            }
+            else{
+                Console.WriteLine("array element that is present on index number  "+ input +"is not maximum");
+            }
+            
+            
+        }
+        return max;
+        
+    }
+    public static void Main(String[] args){
+        
+        //creating the object of class
+        ArrayMinMax amm = new ArrayMinMax();
+        
+        //Declaration and initialization of an array to find the minimum number from the array.
+        int[] array_min = new int[]{78,56,1,0,86,556,215,448};
+        
+        int[] array_max = {85,6,35,45,6,788,3989,2,34,3489,5};
+        
+        Console.WriteLine("calling the method to find the minimum from an array");
+        
+        amm.display_min(array_min);
+        
+        Console.WriteLine("the minimum number from the array is " + amm.display_min(array_min));
+        
+        Console.WriteLine("calling the method to find the maximum number from passed array");
+        amm.display_max(array_max);
+        
+        Console.WriteLine("the maximum number from the passed array is  " + amm.display_max(array_max) );
+        
+        Console.WriteLine("end of the program");
+        
+    }
 
 
