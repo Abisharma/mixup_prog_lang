@@ -1,4 +1,5 @@
-
+In C# programming, array is an bast type object i.e. System.Array. We use array to store simillar type of data. array index starts from zero.
+we can store only fixed number of data that is also known as the disadvantage of array.
 
 
 
@@ -26,3 +27,51 @@ class ArrayExample{
     }
     
 }
+
+//Below program is used to demonstrate the different type of ways to define and initialize the array element.
+
+using System;
+
+class ArrayExample{
+    //Basically this class contains different type of ways to declare and initialize the arrays.
+    
+    public void display_array_one(){
+        //this method contains a way to initialize the array
+        int[] array_one = new int[5] {12,85,63,79,36};
+        display_array_data(array_one);
+    }
+    
+    
+    public void display_array_two(){
+        //this method contains another way to declare and initialize the array
+        int[] array_two = new int[]{56,84,35,75,67};
+        display_array_data(array_two);
+        
+    }
+    public void display_array_three(){
+        //the remaining way to declare and initialize is following
+        int[] array_three = {45,29,71,68,57};
+        display_array_data(array_three);
+    }
+    
+    public void display_array_data(int[] input_array){
+        //traversing of the array data as below
+        for(int input = 0; input<input_array.Length; input++){
+            Console.WriteLine("Array element in array at position  " + input +"  is "+input_array[input]);
+        }
+        
+    }
+    public static void Main(String[] args){
+        
+        ArrayExample ae = new ArrayExample();
+        
+        ae.display_array_one();
+        
+        ae.display_array_two();
+        
+        ae.display_array_three();
+        
+    } 
+}
+
+
