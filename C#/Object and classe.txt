@@ -6,3 +6,94 @@ data members are also accessed by using the object.
 Class is used to create the group of similer type of object, it is a template
 from which objects are created. it can contain fields, methods,
 contructors etc.
+
+
+1.Simple program of an object.
+
+using System;
+class ClassAndObjectEx{
+    
+    //this program contains the simple accessability of the object for data members.
+    
+    String firstname;
+    String lastname;
+    
+    public static void Main(String[] args){
+        
+        ClassAndObjectEx caoe = new ClassAndObjectEx();
+        caoe.firstname = "alpha";
+        caoe.lastname ="con";
+    
+        Console.WriteLine("the full name is  --" + caoe.firstname + " "+ caoe.lastname);
+        
+        
+        
+    }
+}
+
+2. Program to contain the Main method into another class.
+
+using System;
+
+public class WithoutMain{
+    
+   public String first_name;
+   public String last_name;
+    
+    public void display(){
+        Console.WriteLine("first name of the student is  "+ first_name + " last name of the student is  "+ last_name);
+        
+    }
+    
+}
+class ContainMainMethod{
+    
+    public static void Main(String[] args){
+    
+    WithoutMain wm  = new WithoutMain();
+    wm.first_name = Console.ReadLine();
+    wm.last_name = Console.ReadLine();
+    
+    wm.display();
+    }
+    
+}
+
+3. Program to get input from the user and insert to the data member of the no main method class,
+
+using System;
+
+public class WithoutMain{
+    public int student_id;
+    public string first_name;
+    public string last_name;
+    
+    
+    public void insertion(int id, string fname, string lname){
+        
+        student_id = id;
+        first_name = fname;
+        last_name = lname;
+        
+    }
+    
+    public void display(){
+        Console.WriteLine("student id is" + student_id + "first name of student  is  " + first_name + "last name of student is  "+ last_name );
+    }
+}
+
+class WithMain{
+    
+    public static void Main(String[] args){
+        
+        WithoutMain wm = new WithoutMain();
+        int id  = Convert.ToInt32(Console.ReadLine());
+        String first_name = Console.ReadLine();
+        String last_name = Console.ReadLine();
+        wm.insertion(id,first_name,last_name);
+        wm.display();
+    }
+    
+}
+
+
