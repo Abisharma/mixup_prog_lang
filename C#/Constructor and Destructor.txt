@@ -1,0 +1,23 @@
+Basically the Constructor is a special kind of a method that contain the same name as the class name, it is used to initialize the data members(static) that are instance variables.
+A constructor get to invoke itself automatically at the time of object creation. 
+
+Basically there are 2 types of constructor that are defult parameter(also known as zero-parameter constructor) and parameterized constructor.
+
+
+1. A Simple example of a constructor(default constructor) call.
+
+using System;
+
+class ConstructorExample{
+    public ConstructorExample(){
+        Console.WriteLine("Constructor invoked during object creation")    ;
+    }
+    
+    
+    public static void Main(String[] args){
+        ConstructorExample  first_object = new ConstructorExample();
+        ConstructorExample second_object
+ = new ConstructorExample();        
+    }
+    
+}
