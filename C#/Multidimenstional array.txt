@@ -6,3 +6,40 @@ int[,] array_two_Dimenstional = new int[3,3];
 int[,] array_two_Dimenstional = new int[,]{{1,2,3},{4,5,6},{7,8,9}};
 int[,] array_Two_Dimenstional = new int[]{{1,2,3},{4,5,6},{7,8,9}};
 
+using System;
+
+class Multi_Dimenstional_Array{
+    
+    public void create_Matrix(){
+        
+        Console.WriteLine("inside create_Matrix method");
+        //defining and initializing the 2D array
+        int[,] Two_D_Array = new int[3,3]{{1,2,3},{4,5,6},{7,8,9}};
+        for(int row =0; row<3; row++){
+            
+            for(int col = 0; col<3; col++){
+                //Console.Write("Printing the elements of the array in the form of Matrix");
+                Console.Write(Two_D_Array[row,col]+" ");
+                
+            }
+            Console.WriteLine();
+            
+        }
+        
+        
+    }
+    
+    
+    public static void Main(String[] args){
+        
+        Multi_Dimenstional_Array mda = new Multi_Dimenstional_Array();
+        
+        Console.WriteLine("calling the method to create the matrix");
+        //method call
+        mda.create_Matrix();
+        
+        Console.WriteLine("end of the control statement");
+        
+    }
+    
+}
