@@ -1,0 +1,8 @@
+Object and class :- In c# a program is written by using the object and 
+class, object is a real word entity created on run time during the execution
+of a program. new keyword is used to allocate the memory for reference
+variable of class type i.e. also known as actual object. methods and 
+data members are also accessed by using the object.
+Class is used to create the group of similer type of object, it is a template
+from which objects are created. it can contain fields, methods,
+contructors etc.
