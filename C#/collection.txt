@@ -23,7 +23,66 @@ Stack, ConcurrentQueue etc.
 
 FOLLOWING SYSTEM.COLLECTION.GENERIC CLASSES AND THEIR EXAMPLE.
 
-1. C# List :- We use the List Collection to store the objects and it can store the duplicate of the objects as well. it is placed into System.Collection.Generic classes.
+1. C# List :- We use the List Collection to store the objects and it can store the duplicate of the objects as well. it is placed into System.Collection.Generic classes. To traverse
+the data from the List collection we can use the for each loop.
 
-SIMPLE EXAMPLE FOR THE LIST COLLECTION.
+1. SIMPLE EXAMPLE FOR THE LIST COLLECTION.
+
+
+using System;
+using System.Collections.Generic;
+
+class ListExample{
+    //this program uses the add funtion to initialize the data into the list.
+
+    public void display(List<string> input_list){
+        foreach(string input_names in input_list)
+            Console.WriteLine(" names in the list "+input_names);
+    }
+    
+    
+    public static void Main(String[] args){
+        
+        ListExample le =new ListExample();
+        
+        List<string> names = new List<string>();
+        names.Add("vinod");
+        names.Add("ram");
+        names.Add("alex");
+        names.Add("falempin");
+        names.Add("alexis de claire");
+        
+        le.display(names);
+    }
+    
+}
+
+
+Initilization of the List by using initialization block during the declaration.
+
+using System;
+using System.Collections.Generic;
+
+class ListExample{
+    public void display(List<string> input_list){
+            
+            foreach(string input_names in input_list ){
+                Console.WriteLine("names that are presents into list is"+ input_names);
+                
+            }
+            
+        }
+    
+    public static void Main(String[] args){
+        
+        List<string> names = new List<string>(){"raman","mahesh","ankit","ajay" };
+        
+        ListExample le = new ListExample();
+        
+        le.display(names);
+        
+    }
+    
+}
+
  
