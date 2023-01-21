@@ -85,4 +85,62 @@ class ListExample{
     
 }
 
- 
+2. SIMPLE EXAMPLE FOR THE HASH SET COLLECTION
+
+HashSet,  it is recommeded to use the HashSet when we want to store the unique object/value unlike List collection, it is present into system.Collections.Generic classes. it is used
+to perform operations like store, retrieve and update etc.
+
+
+ADDING THE DATA WITH ADD OPERATION  
+
+using System;
+using System.Collections.Generic;
+
+class HashSetExample{
+	
+    public void display(HashSet<string> input_hashset){
+    	
+        foreach(string input_names in input_hashset){
+        	Console.WriteLine("names that are present in hash set  "+ input_names);        
+        }
+        
+    }
+    
+    public static void Main(String[] args){
+    	HashSetExample hse = new HashSetExample();
+        HashSet<String> names = new HashSet<string>();
+        // duplicating some of the values
+        names.Add("Antoine");
+        names.Add("alex");
+        names.Add("sandrine");
+        names.Add("catherine");
+        names.Add("guinëlle");
+        names.Add("sandrine");
+        names.Add("guinëlle");
+        
+        hse.display(names);
+    }
+    
+}
+
+
+ADDING THE DATA WITH INITIALIZATION AND
+
+using System;
+using System.Collections.Generic;
+
+class HashSetExample{
+    public void display(HashSet<string> input_hashset){
+        foreach(string input_names in input_hashset){
+            Console.WriteLine("name that is present into the hash set is " + input_names);
+        }
+    }
+    public static void Main(String[] args){
+        
+        HashSetExample hse = new HashSetExample();
+        HashSet<string> names = new HashSet<string>(){"Alex","antoine","sandrine","catherine","antoine","sandrine"};
+        hse.display(names);
+        
+    }
+    
+}
