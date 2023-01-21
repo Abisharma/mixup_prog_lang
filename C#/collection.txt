@@ -144,3 +144,66 @@ class HashSetExample{
     }
     
 }
+
+3. Sorted Set :- it is used to store the objects without duplicacy, as the names of the collection suggest that it is storing the objects in the ascending order,
+also present into System.Collections.Generic namespace. it is suggest to use it when we want to store the unique value and want to maintain the ascending order.
+
+
+//Simple example of the Sorted set collection with the insertion of objects by using the add method.
+
+using System;
+using System.Collections.Generic;
+
+class SortedSetExample{
+	
+	public void display(SortedSet<string> input_sorted_set ){
+	    foreach(string input_sorted_name in input_sorted_set){
+	        
+	        Console.WriteLine("name that is presented into SortedSet  " + input_sorted_name);
+	        
+	    }
+	}
+	
+    public static void Main(String[] args){
+    	SortedSetExample sse  = new  SortedSetExample();
+    	SortedSet<string> names =new SortedSet<string>();
+    	//in the output these names will be sorted into ascending order
+    names.Add("zibril");
+    names.Add("Alex");
+    names.Add("pauline");
+    names.Add("morthy");
+    names.Add("ludovic");
+    
+    sse.display(names);
+    
+     }
+    
+}
+
+
+using System;
+using System.Collections.Generic;
+
+class SortedSetExample{
+        
+        public void display(SortedSet<string> input_sorted_names){
+            foreach(string input_names in input_sorted_names){
+                //this line will print the names in the ascending order
+                Console.WriteLine("name that is present in SortedSet  "+input_names);
+                
+            }
+        }
+        
+    public static void Main(String[] args){
+        
+        SortedSetExample sse = new SortedSetExample();
+        //initializing the SortedSet by using the initialization block 
+        //during the definition of the SortedSetExample.
+        SortedSet<string> names = new SortedSet<string>(){"zibril","alex","yuan","barak","chloé","xavier"};
+        
+        sse.display(names);
+    }
+}
+
+
+
