@@ -1,0 +1,29 @@
+Collection used to store the group of objects, array also do work like collection but the difference between the collection and is fixed size in array we can not add the objects whereas
+in collection we can perform the insertion of the objects. 
+Following are the operations that we perform on collection.
+
+1. Store Objects
+2. Update Objects
+3. Delete Objects
+4. Traversing Objects
+5. Sorting Objects
+6. Searching Objects
+
+
+All collection classes are presents in System.Collection namespace, there are 3 ways to work with collection tha tare following.
+1. System.Collection.Generic classes :- it contains the List Collection, stack Collection, Queue Collection, Dictionary Collection, Dictionary Sorted Collection, Hash Set Collection, Linked List
+Collection, List Sorted collection and Sorted Set Collection.
+ 
+2. System.Collection classes : there are 4 classes that are present into System.Collection, it is not recommended to use these 4 classes as they are deprecated, it is recommended to use
+Generic class as in sort we can perform all kind of data structure operations.
+
+3. System.Collection.Concurrent classes :- these classes are used to provide the safe access to multiple threads for using the objects. for example BlockingCollection, ConcurrentBag, Concurrent
+Stack, ConcurrentQueue etc.
+
+
+FOLLOWING SYSTEM.COLLECTION.GENERIC CLASSES AND THEIR EXAMPLE.
+
+1. C# List :- We use the List Collection to store the objects and it can store the duplicate of the objects as well. it is placed into System.Collection.Generic classes.
+
+SIMPLE EXAMPLE FOR THE LIST COLLECTION.
+ 
