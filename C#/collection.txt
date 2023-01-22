@@ -299,3 +299,121 @@ class QueueExample{
 }
 
 
+6. Dictionary Collecions :- It presents into System.collections.Generic namespace. Dictionary store the value in the form of key and value. it contains the unique key. it follows 
+concept of the hash table, as it store the value by using the unique key it is easy to traverse and search value. to traverse the data from the dictionary we use the foreach loop.
+To traverse the key and value we use the KeyValuePaire classe that will give the access to the key and it's corresponded value.
+
+//SIMPLE EXAMPLE OF THE DICTIONARY.
+
+using System;
+using System.Collections.Generic;
+
+class DictionaryExample{
+    
+    public void display(Dictionary<string,string> input_dictionary_names){
+        foreach(KeyValuePair<string,string> input_key_value in input_dictionary_names){
+            Console.WriteLine("key element of input  " + input_key_value.Key + "value correspond to key is  "+ input_key_value.Value);
+        }
+    }
+    
+    public static void Main(string[] args){
+        
+        DictionaryExample de = new DictionaryExample();
+        Dictionary<string,string> names = new Dictionary<string,string>();
+        
+        names.Add("1","Alexi d'eclere");
+        names.Add("2","Ajay");
+        names.Add("3","Depak");
+        names.Add("4","Mohit");
+        //Dictionary contains only unique key
+        //names.Add("4","Rohit");
+        names.Add("5","Sunil");
+        
+        de.display(names);
+        
+    }
+    
+}
+
+
+7. Sorted Dictionary :- It is present into System.collections.Generic namespace, it uses the concept of hashtable. it is used to store the data on the basis of the unique key in
+the ascending order. To store the data we use Add() method and to traverse key and value from we use the KeyValuePaire class.
+
+//SIMPLE PROGRAM TO STORE THE DATA INTO DICTIOANRY SORTED COLLECTIONS.
+
+using System;
+using System.Collections.Generic;
+
+class DictionarySortedExample{
+    
+    public void display(SortedDictionary<string,string> input_sorted_Dictionary_names){
+            
+            foreach(KeyValuePair<string,string> input_key_value_sorted in input_sorted_Dictionary_names)
+            {
+                    Console.WriteLine("key element from dictionary on  "+input_key_value_sorted.Key +" position is "+ input_key_value_sorted.Value);
+            }
+        
+    }
+    
+    public static void Main(String[] args){
+        DictionarySortedExample dse = new DictionarySortedExample();
+        
+        SortedDictionary<string, string> names = new SortedDictionary<string,string>();
+        // Adding the values into descending form
+        names.Add("5","zibril");
+        names.Add("4","abhishek");
+        names.Add("3","karan");
+        names.Add("2","malcolm");
+        names.Add("1","karan");
+        
+        dse.display(names);
+        
+    }
+    
+}
+
+8. Sorted List :- Sorted List is used to store the objects in form of key value pair, it stores the value on the basis of unique key in ascending order.SortedList Collection is present 
+into the System.Collection.Generic namespace. it is recommended to use SortedList when we want to perform store and retrieve operation compare to the Sorted Dictionary as it is
+consuming the less memory. it is recommended to use SortedDictionary over SortedList when we want to perform insertion and remove operation as SortedDictionary is faster than 
+SortedList.
+
+//SIMPLE PROGRAM FOR SORTEDLIST COLLECTIONS.
+
+
+using System;
+using System.Collections.Generic;
+
+class SortedListExample{
+    
+    public void display(SortedList<string,string> input_sorted_list){
+        
+        foreach(KeyValuePair<string,string> input_sorted in input_sorted_list){
+            
+            Console.WriteLine(" element in Sorted List on  " + input_sorted.Key +"   postion with it correspond value "+input_sorted.Value);
+            
+        }
+        
+    }
+    
+    public static void Main(String[] args){
+        
+        SortedListExample sle = new SortedListExample();
+        SortedList<string,string> names = new SortedList<string,string>();
+        names.Add("6","Ajay");
+        names.Add("5","chinmay");
+        names.Add("4","abhishek");
+        names.Add("3","kuldeep");
+        names.Add("2","ashish");
+        names.Add("1","mohit");
+        sle.display(names);
+        
+        
+    }
+    
+}
+
+
+
+
+
+
