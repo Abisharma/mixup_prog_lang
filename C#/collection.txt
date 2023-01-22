@@ -413,6 +413,82 @@ class SortedListExample{
 }
 
 
+9. Linked List :- it present into System.Collections.Generic namespace, it uses the concept of the LinkedList. it can contain the duplicate value.it uses the Add() method to store
+fastly the data into. it allows the user to insert an element on a specified location or before and after on a specified element by AddFirst() and AddLast() method.
+
+//SIMPLE PROGRAM OF A LINKED LIST.
+
+using System;
+using System.Collections.Generic;
+
+class LinkedListExample{
+    
+        public void display(LinkedList<string> input_linked_list){
+                foreach(string input_element in input_linked_list){
+                        Console.WriteLine("Element from linked list is "+input_element);
+                }
+        }
+    
+    public static void Main(String[] args){
+        
+        LinkedListExample lle = new LinkedListExample();
+        
+        LinkedList<string> names = new LinkedList<string>();
+        names.AddLast("abhishek");
+        names.AddLast("karan");
+        names.AddLast("katia");
+        names.AddLast("kamilia");
+        names.AddLast("ajay");
+        
+        lle.display(names);
+        
+    }
+    
+}
+
+
+//SIMPLE EXAMPLE FOR LINKED LIST TO ADD ELEMENT BEFORE OR AFTER A SPECIFIED ELEMENT.
+
+
+using System;
+using System.Collections.Generic;
+
+class LinkedListExample{
+        public void display(LinkedList<string> input_linked_list){
+            foreach(string input_element in input_linked_list){
+                
+                Console.WriteLine("Linked list element is  "+ input_element);
+                
+            }
+        }
+    
+    public static void Main(string[] args){
+        
+        LinkedListExample lle = new LinkedListExample();
+        LinkedList<string> names = new LinkedList<string>();
+        names.AddLast("Xavier");
+        names.AddLast("Thomas");
+        names.AddLast("Steve");
+        names.AddLast("Alexandre");
+        names.AddLast("phillpe");
+        names.AddLast("decoqe bertard");
+        names.AddLast("Joseé");
+        
+        Console.WriteLine("Linked list element before the insertion of another element over before or after specific element  ");
+        
+        lle.display(names);
+        
+        LinkedListNode<string> node = names.Find("phillpe");
+        
+        names.AddBefore(node,"Before Phillpe");
+        names.AddAfter(node,"After Phillpe");
+        
+        Console.WriteLine("liked list element after adding the element before or after a specific element");
+        
+        lle.display(names);
+    }
+    
+}
 
 
 
