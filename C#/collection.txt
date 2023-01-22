@@ -250,3 +250,52 @@ class StackExample{
     }
 }
 
+5. Queue Collection :- Queue is used to store the objects by using the enqueue and dequeue operation, whereas enqueue is used to add the data and dequeue is used to remove the data from
+the queue collection, it uses the FIFO(First In First Out) methodology, we can use the peek() method to retrieve the top most element from the queue. it presents into System.Collections.
+Generic namespaces. Like stack it can contain the duplicate values as well.
+
+// SIMPLE EXAMPLE OF QUEUE COLLECTION TO ADD AND RETRIEVE THE ELEMENTS.
+
+using System;
+using System.Collections.Generic;
+
+class QueueExample{
+    
+    public void display(Queue<string> input_queue){
+            
+            foreach(string input_names in input_queue){
+                Console.WriteLine("name present in Queue is  "+ input_names);
+            }
+            
+    }
+    
+    public static void Main(String[] args){
+        
+        QueueExample qe = new QueueExample();
+        Queue<string> names = new Queue<string>();
+        
+        names.Enqueue("alexi");
+        names.Enqueue("alexandrine");
+        names.Enqueue("daphine");
+        names.Enqueue("sarah");
+        names.Enqueue("nancy");
+        names.Enqueue("thomas");
+	//Enqueuing a duplicate data into queue.
+        names.Enqueue("sarah");
+        
+        qe.display(names);
+        
+        Console.WriteLine();
+        Console.WriteLine();
+        
+        Console.WriteLine("the peek name in Queue is  "+names.Peek() );
+        
+        string dequeue_element = names.Dequeue();
+        Console.WriteLine();
+        Console.WriteLine("the dequeue element from queue is " + dequeue_element);
+        
+    }
+    
+}
+
+
