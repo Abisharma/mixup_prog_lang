@@ -207,3 +207,46 @@ class SortedSetExample{
 
 
 
+4. Stack Collection :- stack collection is present into System.Collections.Generic namespace, it uses the LIFO to store the data, LIFO stands for Last In First Out. To store and 
+Retrieve the data it uses two operation that are push and pop respectively. to see the last element we can use the peek method. It can contain the duplicate element.s
+
+// SIMPLE PROGRAM TO USE THE PUSH  AND POP METHOD WITH STACK.
+using System;
+using System.Collections.Generic;
+
+class StackExample{
+    
+    public void display(Stack<string> input_stack){
+            foreach(string input_names in input_stack){
+                Console.WriteLine(" names that is present in stack   "+input_names);
+            }
+        }
+    
+    public static void Main(String[] args){
+        
+        StackExample se = new StackExample();
+        
+        
+        Stack<string> names = new Stack<string>();
+        
+        names.Push("Imen");
+        names.Push("alex");
+        names.Push("Linda");
+        names.Push("christien");
+        names.Push("Imen");
+        names.Push("bernard");
+        
+        se.display(names);
+        string peek_element = names.Peek();
+        Console.WriteLine("peek element in the stack is  " + peek_element );
+        
+        string pop_element = names.Pop();
+        
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine(" the poped element from the stack is  " + pop_element);
+        
+        Console.WriteLine("the peek element after pop operation on stack  " + names.Peek());
+    }
+}
+
