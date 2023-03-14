@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>servletjspexercises</display-name>
+  
+  
+ <context-param>
+ 	<param-name>email</param-name>
+ 	<param-value>abc@abc.com</param-value>
+</context-param>
+  
+  <context-param>
+  <param-name>username</param-name>
+  <param-value>abhishek</param-value>
+  </context-param>
+  
+  <servlet>
+  <servlet-name>Program</servlet-name>
+  <servlet-class>servletjspexercises.servletclasses.FirstServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Program</servlet-name>
+  <url-pattern>/startwithservlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>H</servlet-name>
+  <servlet-class>servletjspexercises.servletclasses.FirstServletHtml</servlet-class>
+  </servlet>
+  
+  
+<servlet-mapping>
+<servlet-name>H</servlet-name>
+<url-pattern>/pra.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	
+	<servlet-name>UV</servlet-name>
+	<servlet-class>servletjspexercises.servletclasses.FetchUserDataWithValidation</servlet-class>
+	
+</servlet>
+
+<servlet-mapping>
+	<servlet-name> UV</servlet-name>
+	<url-pattern>/UserValidation</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>HH</servlet-name>
+	<servlet-class>servletjspexercises.servletclasses.GetMultipleValues</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>HH</servlet-name>
+	<url-pattern>/MultipleValuesThroughSingleName</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>GetAllnames</servlet-name>
+	<servlet-class>servletjspexercises.servletclasses.GetAllNamesFromHtmlFile</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>GetAllnames</servlet-name>
+	<url-pattern>/GetAllNamesFromHtmlFile</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>SRD</servlet-name>
+	<servlet-class>servletjspexercises.servletclasses.LogInWithSendRedirect</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>SRD</servlet-name>
+	<url-pattern>/user</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>ch3</servlet-name>
+	<servlet-class>servletjspexercises.servletclasses.ValidUser</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ch3</servlet-name>
+	<url-pattern>/auth1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>inus3</servlet-name>
+	<servlet-class>servletjspexercises.servletclasses.InValidUser</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>inus3</servlet-name>
+	<url-pattern>/InValidUser</url-pattern>
+</servlet-mapping>
+
+<servlet>
+
+<servlet-name>ExSCFG</servlet-name>
+<servlet-class>servletjspexercises.servletclasses.ExServletConfig</servlet-class>
+
+<init-param>
+<description>this is used  as  a private varible to each servlet</description>
+<param-name>username</param-name>
+<param-value>Abhishek</param-value>
+</init-param>
+
+
+</servlet>
+
+<servlet-mapping>
+<servlet-name>ExSCFG</servlet-name>
+<url-pattern>/ExScfg</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>ReqDis</servlet-name>
+	<servlet-class>servletjspexercises.servletclasses.ExRequestDispatcher</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ReqDis</servlet-name>
+	<url-pattern>/reqdispatch</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>ReqDisIn</servlet-name>
+	<servlet-class>servletjspexercises.servletclasses.ExReqDisInclude</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ReqDisIn</servlet-name>
+	<url-pattern>/reqdisinclude</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>ch4</servlet-name>
+	<servlet-class>servletjspexercises.servletclasses.ExReqDis</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ch4</servlet-name>
+	<url-pattern>/RequestDispatcherfr</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>ch5</servlet-name>
+	<servlet-class>servletjspexercises.servletclasses.ExReqDisFr</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ch5</servlet-name>
+	<url-pattern>/requestDispatcherForward</url-pattern>
+</servlet-mapping>
+
+
+
+</web-app>
